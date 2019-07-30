@@ -1,0 +1,218 @@
+.jumbotron {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+  float: center;
+  text-align: center;
+  background: #8ed5c9;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+
+body {
+  background-image: url("Images/13.jpg");
+  font-family: "Shadows Into Light Two", cursive;
+  font-size: 14pt;
+  /* background-color: #bedadb; */
+  /* background-position: fixed;
+  margin: 0;
+  background-repeat: no-repeat; */
+}
+
+h3,
+h4 {
+  font-family: "Walter Turncoat", cursive;
+  /* font-size: 20pt; */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: auto;
+  padding-right: auto;
+  text-align: center;
+  color: white;
+}
+
+.gifs {
+  height: 292.5px;
+  width: 292.5px;
+  background-color: #afca52;
+  margin: 5px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+}
+
+img {
+  display: block;
+  margin: auto;
+  padding: auto;
+  /* width: 50%; */
+  max-width: 250px;
+  max-height: 250px;
+  position: center;
+}
+
+.homeBtn {
+  background: transparent;
+  border: transparent;
+  width: 300px;
+}
+
+.btn {
+  position: center;
+  width: 100%;
+  background: #fb844d;
+  border: #de5d3e;
+  margin: 5px;
+  align: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+  animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+.qa {
+  padding: 10px;
+}
+
+#personalityHog {
+  align: left;
+}
+
+/* Below is all for the login design */
+
+#coolHog {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group > input,
+.form-label-group > label {
+  height: 3.125rem;
+  padding: 0.75rem;
+}
+
+.form-label-group > label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0; /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  pointer-events: none;
+  cursor: text; /* Match the input under the label */
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  transition: all 0.1s ease-in-out;
+}
+
+.form-label-group input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input:-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-ms-input-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::-moz-placeholder {
+  color: transparent;
+}
+
+.form-label-group input::placeholder {
+  color: transparent;
+}
+
+.form-label-group input:not(:placeholder-shown) {
+  padding-top: 1.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.form-label-group input:not(:placeholder-shown) ~ label {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Fallback for Edge
+-------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+  .form-label-group > label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .form-label-group > label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Everything below this is for result explanation formatting */
+
+.resultContainer {
+  /* border: 3px solid blue; */
+  padding: 20px 40px 40px;
+  /* max-width: 640px; */
+  display: flex;
+  &__image {
+    margin: 20px 30px 0 0;
+    width: 200px;
+    object-fit: contain;
+    align-self: flex-start;
+  }
+  &__text {
+    flex: 1 1 auto;
+  }
+}
