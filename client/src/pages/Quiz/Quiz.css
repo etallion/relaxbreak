@@ -1,0 +1,11 @@
+.quizWrapper {
+    background-image: "https://maxrelax.s3.amazonaws.com/gifs/13.jpg";
+    border: 0.05rem solid;
+    border-color: #555;
+    border-radius: 1rem;
+
+    text-align: center;
+    width: 80rem;
+    height: 40rem;
+
+}
