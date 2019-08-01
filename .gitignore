@@ -59,3 +59,6 @@ typings/
 
 # next.js build output
 .next
+
+# Leah added this to push/merge
+.DS_Store

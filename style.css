@@ -23,7 +23,8 @@ body {
 }
 
 h3,
-h4 {
+h4,
+h5 {
   font-family: "Walter Turncoat", cursive;
   /* font-size: 20pt; */
   margin-left: auto;
@@ -59,16 +60,40 @@ img {
 .homeBtn {
   background: transparent;
   border: transparent;
-  width: 300px;
+  width: 350px;
 }
 
-.btn {
+.navbtns {
   position: center;
   width: 100%;
   background: #fb844d;
   border: #de5d3e;
   margin: 5px;
   align: center;
+  display: block;
+  /* width: 282.5px; */
+}
+
+.btn {
+  position: center;
+  /* width: 100%; */
+  background: #fb844d;
+  border: #de5d3e;
+  margin: 5px;
+  align: center;
+  display: block;
+  width: 282.5px;
+}
+
+/* .btn-primary {
+  margin: 5px;
+} */
+
+.button-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  vertical-align: center;
 }
 
 .btn:hover {
