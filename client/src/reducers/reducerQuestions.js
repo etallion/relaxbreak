@@ -4,50 +4,50 @@ export default function() {
       id: 1,
       question:
         "How large of a group of people are you comfortable hanging around?",
-      content: [
+      answer: [
         {
           points: 1,
           img: (src = "https://maxrelax.s3.amazonaws.com/gifs/active.gif"),
-          questionText: "11-50"
+          answerText: "11-50"
         },
         {
           points: 2,
           img: (src = "https:https://maxrelax.s3.amazonaws.com/gifs/alone.gif"),
-          questionText: "2-10"
+          answerText: "2-10"
         },
         {
           points: 3,
           img: (src = "https:https://maxrelax.s3.amazonaws.com/gifs/alone.gif"),
-          questionText: "100+"
+          answerText: "100+"
         },
         {
           points: 4,
           img: (src = "https:https://maxrelax.s3.amazonaws.com/gifs/alone.gif"),
-          questionText: "0"
+          answerText: "0"
         }
       ],
       id: 2,
       question: "How would you spend your ideal Saturday?",
-      content: [
+      answer: [
         {
           points: 1,
           img: (src = "https://maxrelax.s3.amazonaws.com/gifs/active.gif"),
-          questionText: "Theme Park"
+          answerText: "Theme Park"
         },
         {
           points: 2,
           img: (src = "https:https://maxrelax.s3.amazonaws.com/gifs/alone.gif"),
-          questionText: "Taking nature photos"
+          answerText: "Taking nature photos"
         },
         {
           points: 3,
           img: (src = "https:https://maxrelax.s3.amazonaws.com/gifs/alone.gif"),
-          questionText: "Volunteering"
+          answerText: "Volunteering"
         },
         {
           points: 4,
           img: (src = "https:https://maxrelax.s3.amazonaws.com/gifs/alone.gif"),
-          questionText: "Laying on the Beach"
+          answerText: "Laying on the Beach"
         }
       ]
     }
