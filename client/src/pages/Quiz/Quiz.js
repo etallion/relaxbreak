@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import quizQuestions from "../../api/quizQuestions";
 // import Quiz from "./components/Quiz";
-import Result from "../../components/Result";
-import logo from "../../../../Images/Hedgehogs/logoHog.png";
+import Result from "../../components/Result/Result";
+import logo from "../../Images/Hedgehogs/logoHog.png";
 import "./Quiz.css";
-import QuizContainer from "../../components/QuizContainer";
+import QuizContainer from "../../components/QuizContainer/QuizContainer";
 // import { Link } from "react-router-dom";
 
 class Quiz extends Component {

@@ -5,7 +5,7 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import AdminQuestions from "./pages/admin/Questions";
-import Quiz from "./pages/Quiz";
+import Quiz from "./pages/Quiz/index";
 
 function App() {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { TransitionGroup } from "react-transition-group";
-import Question from "../components/Question";
-import QuestionCount from "../components/QuestionCount";
-import AnswerOption from "../components/AnswerOption";
+import Question from "../Question/Question";
+import QuestionCount from "../QuestionCount/QuestionCount";
+import AnswerOption from "../AnswerOption/AnswerOption";
 import "./style.css";
 
 function QuizContainer(props) {
@@ -24,11 +24,11 @@ function QuizContainer(props) {
     <TransitionGroup
       className="container"
       component="div"
-      transitionName="fade"
-      transitionEnterTimeout={800}
-      transitionLeaveTimeout={500}
-      transitionAppear
-      transitionAppearTimeout={500}
+      // transitionName="fade"
+      // transitionEnterTimeout={800}
+      // transitionLeaveTimeout={500}
+      // transitionAppear
+      // transitionAppearTimeout={500}
     >
       <div key={props.questionId}>
         <QuestionCount counter={props.questionId} total={props.questionTotal} />
