@@ -5,16 +5,22 @@ import API from "../utils/API";
 
 class Login extends Component {
   state = {
+    name: "",
     email: "",
-    password: ""
+    zipcode: 0,
+    password: "",
+    fb_id: ""
   };
 
   createUser = event => {
     event.preventDefault();
     if (this.state.email && this.state.password) {
       API.saveUser({
+        name: this.state.name,
         email: this.state.email,
-        password: this.state.password
+        zipcode: this.state.zipcode,
+        password: this.state.password,
+        fb_id: this.state.fb_id
       });
     }
   };
@@ -30,8 +36,12 @@ class Login extends Component {
     return (
       <div className="login-div">
         <form onSubmit={this.createUser}>
+          <label>Name:</label>
+          <Input onChange={this.handleInputChange} type="text" name="name" />
           <label>Email:</label>
           <Input onChange={this.handleInputChange} type="text" name="email" />
+          <label>Zipcode:</label>
+          <Input onChange={this.handleInputChange} type="text" name="zipcode" />
           <label>Password:</label>
           <Input
             onChange={this.handleInputChange}

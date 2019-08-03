@@ -23,8 +23,13 @@ class Users extends Component {
         <List>
           {this.state.users.map(user => (
             <ListItem key={user._id}>
-              <h1>{user.email}</h1>
-              <h2>{user.password}</h2>
+              <h1>Name: {user.name}</h1>
+              <h2>Email: {user.email}</h2>
+              <ul>
+                <li>ZipCode: {user.zipcode}</li>
+                <li>Password: {user.password}</li>
+                <li>FB: {user.fb_id}</li>
+              </ul>
             </ListItem>
           ))}
         </List>
