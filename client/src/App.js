@@ -6,8 +6,12 @@ import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
 import Nav from "./components/Nav";
 import AdminQuestions from "./pages/admin/Questions";
+<<<<<<< HEAD
 import Quiz from "./pages/Quiz";
 import Users from "./pages/admin/Users";
+=======
+import Quiz from "./pages/Quiz/index";
+>>>>>>> master
 
 function App() {
   return (
