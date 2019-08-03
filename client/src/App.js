@@ -8,7 +8,7 @@ import Nav from "./components/Nav";
 import AdminQuestions from "./pages/admin/Questions";
 import Quiz from "./pages/Quiz";
 import Users from "./pages/admin/Users";
-import Quiz from "./pages/Quiz/index";
+// import Quiz from "./pages/Quiz/index";
 
 function App() {
   return (
