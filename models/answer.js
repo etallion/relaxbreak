@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const answerSchema = new Schema({
-  answer: {
+  answers: {
     active: {
         answer: { type: String, required: true },
         gif: { type: String, required: true }

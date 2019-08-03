@@ -7,8 +7,10 @@ import { Col, Container, Row } from '../../components/Grid';
 import DeleteBtn from '../../components/DeleteBtn';
 import API_A from '../../utils/API_A';
 import API_Q from '../../utils/API_Q';
-import { runInThisContext } from 'vm';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// minified version is also included
+// import 'react-toastify/dist/ReactToastify.min.css';
 
 class Questions extends React.Component {
     state = {
@@ -40,11 +42,13 @@ class Questions extends React.Component {
             console.log(res);
             this.setState({ question: res.data.question})
             if(res.data.answers) {
-                this.setState({ answers: res.data.answers});
+                this.setState({ answers: res.data.answers.answers});
             }
         })
         .catch(err => console.log(err));
       }
+
+      notify = (res) => toast.success(res);
     
       saveAnswers = () => {
           console.log("saveAnswers");
@@ -52,9 +56,9 @@ class Questions extends React.Component {
             answers: this.state.answers
         })
           .then(res => {
-            console.log(res)
+            this.toast(res)
           })
-          .catch(err => console.log(err));
+          .catch(err => this.toast.error(err));
       };
 
       handleInputChange = e => {
@@ -74,7 +78,12 @@ class Questions extends React.Component {
                 <Row>
                     <Col size="md-12">
                         <Jumbotron>
-                        <h1>{this.state.question}</h1>
+                            <div className="label"></div>
+                            <div style={{"display": "inline-block"}}>
+                                <h1>{this.state.question}</h1>
+                            </div>
+                            <div className="label"><button className="primary-btn btn" onClick={this.saveAnswers}>Save</button></div>
+                       
                         </Jumbotron>
                         <Row>
                             <Col size="md-6">
@@ -112,11 +121,7 @@ class Questions extends React.Component {
                                 </AnswerCard>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col size="md-12">
-                               <div style={{"justifyContent": "right"}}> <button onClick={this.saveAnswers}>Save</button></div>
-                            </Col>
-                        </Row>
+                      
                     </Col>
                 </Row>
             </Container>
