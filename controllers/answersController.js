@@ -18,7 +18,14 @@ module.exports = {
   create: function(req, res) {
     db.Answer
       .create(req.body)
-      .then(dbModel => res.json(dbModel))
+      .then(dbModel => {
+        // return db.Question.findOneAndUpdate({_id: req.params.id}, {$set: { answers: dbModel._id } }, { new: true });
+        db.Question.findOneAndUpdate({_id: req.params.id}, { answers: dbModel._id }, { new: true })
+        .then(question => {
+          return res.json(question)
+        })
+        return res.json(dbModel)
+      })
       .catch(err => res.status(422).json(err));
   },
   update: function(req, res) {
@@ -33,5 +40,5 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
-  }
+  },
 };
