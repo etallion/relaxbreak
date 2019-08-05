@@ -19,7 +19,12 @@ module.exports = {
     db.Answer
       .create(req.body)
       .then(dbModel => {
-        return db.Question.findOneAndUpdate({}, {$set: { answers: dbModel._id } }, { new: true });
+        // return db.Question.findOneAndUpdate({_id: req.params.id}, {$set: { answers: dbModel._id } }, { new: true });
+        db.Question.findOneAndUpdate({_id: req.params.id}, { answers: dbModel._id }, { new: true })
+        .then(question => {
+          return res.json(question)
+        })
+        return res.json(dbModel)
       })
       .catch(err => res.status(422).json(err));
   },

@@ -16,5 +16,9 @@ export default {
   // Saves a book to the database
   saveQuestion: function(questionData) {
     return axios.post("/api/questions", questionData);
+  },
+  // Saves a book to the database
+  updateQuestion: function(questionData) {
+    return axios.put("/api/questions", questionData);
   }
 };

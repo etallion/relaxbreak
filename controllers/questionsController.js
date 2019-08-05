@@ -32,8 +32,21 @@ module.exports = {
   remove: function(req, res) {
     db.Question
       .findById({ _id: req.params.id })
-      .then(dbModel => dbModel.remove())
+      .then(question => {
+        // db.Answer
+        //   .findById({ _id: question.answers })
+        //   .then(answers => answers.remove())
+        //   .then(dbModel => res.json(dbModel))
+        //   .catch(err => res.status(422).json(err));
+        question.remove();
+      })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   }
+  //   db.Question 
+  //     .findById({ _id: req.params.id })
+  //     .then(dbModel => dbModel.remove())
+  //     .then(dbModel => res.json(dbModel))
+  //     .catch(err => res.status(422).json(err));
+  // }
 };

@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 class Questions extends React.Component {
     state = {
         question: '',
+        answers_id: '',
         answers: {
             active: {
                 answer: '',
@@ -34,31 +35,57 @@ class Questions extends React.Component {
             }
         }
     };
+
+    answersEmpty = true;
       
 
     componentDidMount() {
         API_Q.getQuestion(this.props.match.params.id)
         .then(res => {
             console.log(res);
-            this.setState({ question: res.data.question})
+            this.setState({ question: res.data.question});
             if(res.data.answers) {
+                this.answersEmpty = false;
+                this.setState({ answers_id: res.data.answers._id})
                 this.setState({ answers: res.data.answers.answers});
             }
         })
         .catch(err => console.log(err));
       }
 
-      notify = (res) => toast.success(res);
+    //    notify = (res) => toast(res);
     
       saveAnswers = () => {
-          console.log("saveAnswers");
-        API_A.saveAnswers({
-            answers: this.state.answers
-        })
-          .then(res => {
-            this.toast(res)
-          })
-          .catch(err => this.toast.error(err));
+          console.log("saveAnswers/"+this.props.match.params.id);
+        if(this.answersEmpty){
+            // Create new answers entry in database
+            API_A.saveAnswers({
+                answers: this.state.answers
+            }, this.props.match.params.id)
+            .then(res => {
+                console.log("Answers created");
+                toast.success("Answers created", res.data.answers)
+                // API_Q.updateQuestion({
+                //     answers: res.data.answers._id,
+                // }, this.props.match.params.id)
+                // .then(questionRes => {
+                //     console.log("Question updated");
+                //     toast.success("Question updated", res.data.answers)
+                // })
+            })
+            .catch(err => toast.error("Error creating answers: ", err.response));
+            
+        } else {
+            // Update existing answers in database
+            API_A.updateAnswers({
+                answers: this.state.answers
+            }, this.state.answers_id)
+            .then(res => {
+                console.log("Answers updated");
+                toast.info("Answers updated", res.data.answers)
+            })
+            .catch(err => toast.error("Error updating answers: ", err.response));
+        }
       };
 
       handleInputChange = e => {
@@ -77,6 +104,7 @@ class Questions extends React.Component {
             <Container fluid>
                 <Row>
                     <Col size="md-12">
+                    <ToastContainer />
                         <Jumbotron>
                             <div className="label"></div>
                             <div style={{"display": "inline-block"}}>
