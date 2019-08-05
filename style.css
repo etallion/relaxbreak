@@ -1,3 +1,4 @@
+/* This is for the Jumbotron and nav buttons */
 .jumbotron {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
@@ -12,6 +13,8 @@
   align-content: stretch;
 }
 
+/* This is for our main text bodies and background images */
+
 body {
   background-image: url("Images/13.jpg");
   font-family: "Shadows Into Light Two", cursive;
@@ -22,6 +25,7 @@ body {
   background-repeat: no-repeat; */
 }
 
+/* This is for h3-h4 formatting */
 h3,
 h4,
 h5 {
@@ -35,6 +39,7 @@ h5 {
   color: white;
 }
 
+/* This affects each of the containers for the gif images on the quiz */
 .gifs {
   height: 292.5px;
   width: 292.5px;
@@ -57,23 +62,25 @@ img {
   position: center;
 }
 
+/* This is ONLY for the center nav button in the Jumbotron (our logo which is the home button) */
 .homeBtn {
   background: transparent;
   border: transparent;
   width: 350px;
 }
 
+/* This is for the nave button formatting in the Jumbotron */
 .navbtns {
   position: center;
-  width: 100%;
+  width: 60%;
   background: #fb844d;
   border: #de5d3e;
   margin: 5px;
   align: center;
   display: block;
-  /* width: 282.5px; */
 }
 
+/* This is for all of the buttons on the page that are not in the Jumbotron */
 .btn {
   position: center;
   /* width: 100%; */
@@ -85,10 +92,6 @@ img {
   width: 282.5px;
 }
 
-/* .btn-primary {
-  margin: 5px;
-} */
-
 .button-col {
   display: flex;
   flex-direction: row;
@@ -96,6 +99,7 @@ img {
   vertical-align: center;
 }
 
+/* This is for button animations */
 .btn:hover {
   cursor: pointer;
   animation: jelly 0.5s;
@@ -117,16 +121,44 @@ img {
   }
 }
 
+/* This is for formatting the quiz */
 .qa {
   padding: 10px;
 }
 
+/* This is for the hedgehog images on each of the result pages */
 #personalityHog {
-  align: left;
+  width: 500px;
 }
 
-/* Below is all for the login design */
+/* This is for the formatting of the text on the result pages */
 
+.post-container {
+  margin: 20px 20px 0 0;
+  overflow: auto;
+}
+.post-thumb {
+  float: left;
+}
+.post-thumb img {
+  display: block;
+}
+.post-content {
+  margin-left: 300px;
+  background-color: #fac172;
+  text-align: center;
+  /* opacity: 0.5;
+  text-opacity: 100 */
+  padding-left: 20px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.post-title {
+  font-weight: bold;
+  font-size: 200%;
+}
+
+/* Below is all for the login design. DO NOT ALTER AT ALL!*/
 #coolHog {
   display: block;
   margin-left: auto;
