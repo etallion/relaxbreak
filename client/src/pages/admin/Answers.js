@@ -40,9 +40,9 @@ class Questions extends React.Component {
       
 
     componentDidMount() {
+        //Returns question populated with associated answers if exist
         API_Q.getQuestion(this.props.match.params.id)
         .then(res => {
-            console.log(res);
             this.setState({ question: res.data.question});
             if(res.data.answers) {
                 this.answersEmpty = false;
@@ -52,32 +52,19 @@ class Questions extends React.Component {
         })
         .catch(err => console.log(err));
       }
-
-    //    notify = (res) => toast(res);
     
       saveAnswers = () => {
-          console.log("saveAnswers/"+this.props.match.params.id);
         if(this.answersEmpty){
-            // Create new answers entry in database
+            // Create NEW answers entry in database, if didn't exit
             API_A.saveAnswers({
                 answers: this.state.answers
             }, this.props.match.params.id)
             .then(res => {
-                console.log("Answers created");
-                console.log(res.data);
                 this.answersEmpty = false;
-                toast.success("Answers created", res.data.answers)
-                this.setState({ answers_id: res.data._id})
-                // this.setState({ answers: res.data.answers.answers});
-                // API_Q.updateQuestion({
-                //     answers: res.data.answers._id,
-                // }, this.props.match.params.id)
-                // .then(questionRes => {
-                //     console.log("Question updated");
-                //     toast.success("Question updated", res.data.answers)
-                // })
+                toast.success("Answers created " + res.statusText);
+                this.setState({ answers_id: res.data._id});
             })
-            .catch(err => toast.error("Error creating answers: ", err.response));
+            .catch(err => toast.error("Error creating answers " + err.message));
             
         } else {
             // Update existing answers in database
@@ -85,10 +72,9 @@ class Questions extends React.Component {
                 answers: this.state.answers
             }, this.state.answers_id)
             .then(res => {
-                console.log("Answers updated");
-                toast.info("Answers updated", res.data.answers)
+                toast.info("Answers updated " + res.statusText)
             })
-            .catch(err => toast.error("Error updating answers: ", err.response));
+            .catch(err => toast.error("Error updating answers "+ err.message));
         }
       };
 

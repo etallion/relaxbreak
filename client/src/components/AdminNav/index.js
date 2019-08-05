@@ -5,7 +5,7 @@ function Nav() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <Link className="navbar-brand" to="/admin">
-        Max Relax | Admin Console
+        Admin Console
       </Link>
       <Link className="navbar-brand" to="/admin/personality">
         Personalities

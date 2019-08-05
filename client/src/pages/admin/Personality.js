@@ -1,19 +1,18 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NoMatch from "../../pages/NoMatch";
-import Login from "../../pages/Login";
-import AdminNav from "../../components/AdminNav";
-import AdminQuestions from "../../pages/admin/Questions";
-import { Col, Container, Row } from '../../components/Grid';
-import AdminAnswers from "../../pages/admin/Answers";
-import Users from "../../pages/admin/Users";
-import { ToastContainer, toast } from 'react-toastify';
+import React from 'react';
 import Card from '../../components/Card';
 import Jumbotron from '../../components/Jumbotron';
+import { List, ListItem } from '../../components/List';
+import { Link } from "react-router-dom";
+import { Col, Container, Row } from '../../components/Grid';
+import DeleteBtn from '../../components/DeleteBtn';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-class App extends React.Component {
-  render () {
-    return (
+
+class Personality extends React.Component {
+   
+    render() {
+      return (
         <div>
             <Container fluid>
                 <Row>
@@ -22,7 +21,7 @@ class App extends React.Component {
                         <Jumbotron>
                             <div className="label"></div>
                             <div style={{"display": "inline-block"}}>
-                                <h1>Admin Console</h1>
+                                <h1>Personalities</h1>
                             </div>
                             <div className="label"><button className="primary-btn btn" onClick={this.saveAnswers}>Save</button></div>
                        
@@ -56,7 +55,7 @@ class App extends React.Component {
             </Container>
         </div>
       );
-  }; 
-}
+    }
+};
 
-export default App;
+export default Personality;

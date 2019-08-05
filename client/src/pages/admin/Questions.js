@@ -65,9 +65,10 @@ class Questions extends React.Component {
             <ListItem key={question._id}>
                 <Link to={"/admin/questions/" + question._id}>
                 <strong>
-                    {question.question} ID= {question._id}
+                    {question.question}
                 </strong>
                 </Link>
+                {"  "}ID: {question._id}
                 <DeleteBtn onClick={() => this.deleteQuestion(question._id, question.answers)} />
             </ListItem>
             ))}
@@ -78,17 +79,16 @@ class Questions extends React.Component {
       saveQuestion = () =>{
         API_Q.saveQuestion({question: this.state.newQuestion})
         .then(res => {
-          toast.success("Created new Question", res);
-          console.log("Created new Question", res);
+          toast.success("Created new question " + res.statusText);
           let newState = this.state.questions;
-          newState.push(res.data);
+          newState.push(res.data) ;
           this.setState({questions: newState});
           this.setState({newQuestion: ""});
           this.render();
         })
         .catch(err => {
           console.log(err);
-          toast.error("Error creating question ", err.response);
+          toast.error("Error creating question " + err.message);
       });
     };
 
@@ -100,7 +100,7 @@ class Questions extends React.Component {
                 <Row>
                     <Col size="md-12">
                         <Jumbotron>
-                        <h1>Questions {this.state.questions.length}</h1>
+                        <h1>Questions </h1> <h5>Count: {this.state.questions.length}</h5>
                         </Jumbotron>
                         
                         <List>

@@ -11,6 +11,7 @@ import AdminAnswers from "./pages/admin/Answers";
 import Admin from "./pages/admin";
 import Quiz from "./pages/Quiz";
 import Users from "./pages/admin/Users";
+import Personality from "./pages/admin/Personality";
 
 function App() {
   return (
@@ -22,14 +23,13 @@ function App() {
         </Switch>
         <Switch>
           <Route exact path="/" component={Books} />
-          <Route exact path="/books" component={Books} />
-          <Route exact path="/books/:id" component={Detail} />
           <Route exact path="/quiz" component={Quiz} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/admin/questions" component={AdminQuestions} />
           <Route exact path="/admin/questions/:id" component={AdminAnswers} />
-          {/* <Route exact path="/admin" component={Admin} /> */}
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/admin/personality" component={Personality} />
           <Route exact path="/admin/users" component={Users} />
+          <Route exact path="/admin" component={Admin} />
           <Route component={NoMatch} />
         </Switch>
       </div>
