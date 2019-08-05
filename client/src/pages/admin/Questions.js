@@ -34,23 +34,26 @@ class Questions extends React.Component {
       deleteQuestion = (id, ans) => {
         API_Q.deleteQuestion(id)
           .then(res => {
-            toast.success("Successly Deletion of Question", res);
-            console.log("Successfuly Deletion.")
+            toast.success("Question deleted", res);
+            console.log("Question deleted")
             let newQuestions = this.state.questions.filter(obj => obj._id !== id);
             this.setState({questions: newQuestions});
           })
-          .catch(err => console.log("Deletion Failed.", err));
+          .catch(err => console.log("Deletion Failed.", err.reponse));
           // console.log("a_id=", ans._id);
           if(ans){
             API_A.deleteAnswer(ans._id)
             .then(res => {
-              toast.success("Successly Deletion of associated Answers", res);
-              console.log("Successfuly Answers.")
+              toast.success("Answers deleted", res);
+              console.log("Answers deleted")
               let questions = this.state.questions.filter(obj => obj.id !== id);
               this.setState({questions});
             })
-            .catch(err => console.log("Answer Deletion Failed.", err));
-          }
+            .catch(err => {
+              console.log("Failed to delete answers ", err.response);
+              toast.error("Failed to delete answers ", err.response)
+          });
+        }
           this.render();
       }
 
@@ -75,8 +78,8 @@ class Questions extends React.Component {
       saveQuestion = () =>{
         API_Q.saveQuestion({question: this.state.newQuestion})
         .then(res => {
-          toast.success("Successly Created new Question", res);
-          console.log("Successly Created new Question", res);
+          toast.success("Created new Question", res);
+          console.log("Created new Question", res);
           let newState = this.state.questions;
           newState.push(res.data);
           this.setState({questions: newState});

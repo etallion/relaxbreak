@@ -64,7 +64,11 @@ class Questions extends React.Component {
             }, this.props.match.params.id)
             .then(res => {
                 console.log("Answers created");
+                console.log(res.data);
+                this.answersEmpty = false;
                 toast.success("Answers created", res.data.answers)
+                this.setState({ answers_id: res.data._id})
+                // this.setState({ answers: res.data.answers.answers});
                 // API_Q.updateQuestion({
                 //     answers: res.data.answers._id,
                 // }, this.props.match.params.id)
