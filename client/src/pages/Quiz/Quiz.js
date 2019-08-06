@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import quizQuestions from "../../api/quizQuestions";
+// import quizQuestions from "../../api/quizQuestions";
 // import Nav from "../../components/Nav";
 import QuizTitle from "../../components/QuizTitle/QuizTitle";
 
@@ -9,6 +9,8 @@ import Result from "../../components/Result/Result";
 import "./Quiz.css";
 import QuizContainer from "../../components/QuizContainer/QuizContainer";
 // import { Link } from "react-router-dom";
+
+import API from '../../utils/API_Q';
 
 class Quiz extends Component {
   constructor(props) {
@@ -21,20 +23,33 @@ class Quiz extends Component {
       answerOptions: [],
       answer: "",
       answersCount: {},
-      result: ""
+      result: "",
+      quizQuestions: []
     };
-
+ 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
 
   componentDidMount() {
-    const shuffledAnswerOptions = quizQuestions.map(question =>
-      this.shuffleArray(question.answers)
-    );
-    this.setState({
-      question: quizQuestions[0].question,
-      answerOptions: shuffledAnswerOptions[0]
-    });
+     //Returns question populated with associated answers if exist
+     API.getQuestions()
+     .then(res => {
+        const qs = res.data.map(item => {
+        let temp = {};
+        temp.question = item.question;
+        temp.answers = this.convertAnswersToArray(item.answers.answers);
+        return temp;
+      });
+      this.setState({quizQuestions: qs});
+      const shuffledAnswerOptions = qs.map(question =>
+        this.shuffleArray(question.answers)
+      );
+      this.setState({
+          question: qs[0].question,
+          answerOptions: shuffledAnswerOptions[0]
+        });
+     })
+     .catch(err => console.log(err));
   }
 
   shuffleArray(array) {
@@ -56,11 +71,39 @@ class Quiz extends Component {
 
     return array;
   }
+ 
+  convertAnswersToArray = (obj) => {
+    let array = [];
+
+    array.push({
+      type: "active", 
+      content: obj.active.answer,
+      gif: obj.active.gif
+    });
+    array.push({
+      type: "creative", 
+      content: obj.creative.answer,
+      gif: obj.creative.gif
+    });
+    array.push({
+      type: "social", 
+      content: obj.social.answer,
+      gif: obj.social.gif
+    });
+    array.push({
+      type: "solo", 
+      content: obj.solo.answer,
+      gif: obj.solo.gif
+    });
+    return array;
+  };
+
+
 
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
 
-    if (this.state.questionId < quizQuestions.length) {
+    if (this.state.questionId < this.state.quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
       setTimeout(() => this.setResults(this.getResults()), 300);
@@ -84,8 +127,8 @@ class Quiz extends Component {
     this.setState({
       counter: counter,
       questionId: questionId,
-      question: quizQuestions[counter].question,
-      answerOptions: quizQuestions[counter].answers,
+      question: this.state.quizQuestions[counter].question,
+      answerOptions: this.state.quizQuestions[counter].answers,
       answer: ""
     });
   }
@@ -114,7 +157,7 @@ class Quiz extends Component {
         answerOptions={this.state.answerOptions}
         questionId={this.state.questionId}
         question={this.state.question}
-        questionTotal={quizQuestions.length}
+        questionTotal={this.state.quizQuestions.length}
         onAnswerSelected={this.handleAnswerSelected}
       />
     );
