@@ -7,7 +7,11 @@ const UserSchema = new Schema({
     type: String,
     allowNull: false,
     trim: true,
-    required: "Name is required"
+    required: "Name is required",
+    validate: [
+      input => input.length >= 2 && input.length <= 50,
+      "name must be between 2 and 50 characters"
+    ]
   },
   email: {
     type: String,
@@ -16,12 +20,21 @@ const UserSchema = new Schema({
     required: "Email is required",
     match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
   },
-  zipcode: { type: String, trim: true, allowNull: true },
+  zipcode: {
+    type: String,
+    trim: true,
+    allowNull: true,
+    validate: [input => input.length <= 5, "zipcode is too long"]
+  },
   password: {
     type: String,
     trim: true,
     allowNull: false,
-    required: "Password is required"
+    required: "Password is required",
+    validate: [
+      input => input.length <= 20 && input.length >= 5,
+      "password must be between 5 and 20 characters"
+    ]
   },
   fb_id: { type: String, allowNull: true }
 });
