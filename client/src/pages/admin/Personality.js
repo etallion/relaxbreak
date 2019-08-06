@@ -1,11 +1,11 @@
 import React from 'react';
 import Card from '../../components/Card';
 import Jumbotron from '../../components/Jumbotron';
-import { List, ListItem } from '../../components/List';
-import { Link } from "react-router-dom";
+//import { List, ListItem } from '../../components/List';
+//import { Link } from "react-router-dom";
 import { Col, Container, Row } from '../../components/Grid';
-import DeleteBtn from '../../components/DeleteBtn';
-import { ToastContainer, toast } from 'react-toastify';
+//import DeleteBtn from '../../components/DeleteBtn';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
