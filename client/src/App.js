@@ -12,6 +12,9 @@ import Admin from "./pages/admin";
 import Quiz from "./pages/Quiz";
 import Users from "./pages/admin/Users";
 import Personality from "./pages/admin/Personality";
+// import Quiz from "./pages/Quiz/index";
+import Home from "./pages/Home";
+// import Quiz from "./pages/Home/index";
 
 function App() {
   return (
@@ -24,6 +27,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Books} />
           <Route exact path="/quiz" component={Quiz} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/admin/questions" component={AdminQuestions} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/admin/questions" component={AdminQuestions} />
           <Route exact path="/admin/questions/:id" component={AdminAnswers} />
