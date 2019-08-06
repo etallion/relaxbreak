@@ -4,7 +4,7 @@ import './AnswerCard.css';
 const AnswerCard = ({answer, gif, personality, handleInputChange}) => {
 
     return (
-        <div className="cardWrapper" >
+        <div className="answerCardWrapper" >
             <p>{personality}</p>
                 <div className="label">
                     Answer
