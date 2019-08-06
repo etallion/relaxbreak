@@ -1,6 +1,4 @@
 import React from 'react';
-import Card from '../../components/Card';
-import API from "../../utils/API_Q";
 import Jumbotron from '../../components/Jumbotron';
 import { List, ListItem } from '../../components/List';
 import { Link } from "react-router-dom";

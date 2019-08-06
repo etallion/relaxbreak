@@ -1,16 +1,11 @@
 import React from 'react';
 import AnswerCard from '../../components/AnswerCard';
 import Jumbotron from '../../components/Jumbotron';
-import { List, ListItem } from '../../components/List';
-import { Link } from "react-router-dom";
 import { Col, Container, Row } from '../../components/Grid';
-import DeleteBtn from '../../components/DeleteBtn';
 import API_A from '../../utils/API_A';
 import API_Q from '../../utils/API_Q';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-// minified version is also included
-// import 'react-toastify/dist/ReactToastify.min.css';
 
 class Questions extends React.Component {
     state = {
