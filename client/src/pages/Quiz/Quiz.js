@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import quizQuestions from "../../api/quizQuestions";
+// import Nav from "../../components/Nav";
+import QuizTitle from "../../components/QuizTitle/QuizTitle";
+
 // import Quiz from "./components/Quiz";
 import Result from "../../components/Result/Result";
-import logo from "../../Images/Hedgehogs/logoHog.png";
+// import logo from "../../Images/Hedgehogs/logoHog.png";
 import "./Quiz.css";
 import QuizContainer from "../../components/QuizContainer/QuizContainer";
 // import { Link } from "react-router-dom";
@@ -123,11 +126,9 @@ class Quiz extends Component {
 
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>React Quiz</h2>
-        </div>
+      <div>
+        <QuizTitle />
+
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
     );

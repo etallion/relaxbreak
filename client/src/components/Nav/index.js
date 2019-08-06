@@ -1,11 +1,15 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import "./style.css";
+import { Link } from "react-router-dom";
+const logo = require("../../Images/Hedgehogs/maxRelaxLogo.png");
 
 function Nav() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav className="navbar navbar-expand-lg mainNav">
       <Link className="navbar-brand" to="/">
-        Max Relax
+        <span>
+          <img src={logo} className="homeBtn" alt="logo" />
+        </span>
       </Link>
     </nav>
   );

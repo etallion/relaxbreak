@@ -1,0 +1,44 @@
+.mainNav {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: bold;
+  /* float: center; */
+  /* text-align: center; */
+  background: #8ed5c9;
+  position: absolute;
+  padding: 0;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  margin: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 9999;
+
+  /* display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; */
+  /* align-items: center;
+  align-content: stretch; */
+}
+img {
+  /* display: block; */
+  /* margin: auto; */
+  padding: auto;
+  /* width: 50%; */
+  max-width: 300px;
+  max-height: 250px;
+  /* position: center; */
+}
+
+.homeBtn {
+  background: transparent;
+  border: transparent;
+  width: 350px;
+}
+
+.navbar-brand {
+  position: relative;
+  left: 42%;
+  margin-left: -42px !important; /* 50% of your logo width */
+  display: block;
+}
