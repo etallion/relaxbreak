@@ -5,10 +5,14 @@
   border: #de5d3e;
   margin: 50px;
   text-align: center;
-  display: block;
+  /* display: block; */
   width: 200px;
   padding: 50px;
   font-family: "Shadows Into Light Two", cursive;
+  position: relative;
+  left: 45%;
+  margin-left: -45px !important; /* 50% of your logo width */
+  display: block;
 }
 
 /* This is for button animations */

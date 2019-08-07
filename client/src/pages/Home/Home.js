@@ -58,7 +58,7 @@ class Home extends Component {
         </HomeWrapper>
         <Row>
           <Col size="md-12">
-            <p>
+            <p className="quizBtnText">
               Can't figure out which personality type best suits your relaxation
               needs? Take the quiz below to find out!
             </p>
