@@ -1,0 +1,34 @@
+.quizBtn {
+  position: center;
+  /* width: 100%; */
+  background: #fb844d;
+  border: #de5d3e;
+  margin: 50px;
+  text-align: center;
+  display: block;
+  width: 200px;
+  padding: 50px;
+  font-family: "Shadows Into Light Two", cursive;
+}
+
+/* This is for button animations */
+.quizBtn:hover {
+  cursor: pointer;
+  animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
