@@ -1,0 +1,11 @@
+.centered-title {
+  text-align: center;
+}
+h1,
+p {
+  margin: 10px;
+}
+.container {
+  background-color: transparent;
+  margin: 2vh, 1% auto, 1vh;
+}
