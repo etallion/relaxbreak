@@ -22,6 +22,7 @@ function App() {
       <div>
         <Switch>
           <Route path="/admin" component={AdminNav} />
+          <Route path="/login" />
           <Route path="/" component={Nav} />
         </Switch>
         <Switch>

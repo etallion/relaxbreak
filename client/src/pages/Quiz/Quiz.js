@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import quizQuestions from "../../api/quizQuestions";
 // import Nav from "../../components/Nav";
-import QuizTitle from "../../components/QuizTitle/QuizTitle";
+// import QuizTitle from "../../components/QuizTitle/QuizTitle";
 
 // import Quiz from "./components/Quiz";
 import Result from "../../components/Result/Result";
@@ -10,7 +10,7 @@ import "./Quiz.css";
 import QuizContainer from "../../components/QuizContainer/QuizContainer";
 // import { Link } from "react-router-dom";
 
-import API from '../../utils/API_Q';
+import API from "../../utils/API_Q";
 
 class Quiz extends Component {
   constructor(props) {
@@ -26,30 +26,30 @@ class Quiz extends Component {
       result: "",
       quizQuestions: []
     };
- 
+
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
   }
 
   componentDidMount() {
-     //Returns question populated with associated answers if exist
-     API.getQuestions()
-     .then(res => {
+    //Returns question populated with associated answers if exist
+    API.getQuestions()
+      .then(res => {
         const qs = res.data.map(item => {
-        let temp = {};
-        temp.question = item.question;
-        temp.answers = this.convertAnswersToArray(item.answers.answers);
-        return temp;
-      });
-      this.setState({quizQuestions: qs});
-      const shuffledAnswerOptions = qs.map(question =>
-        this.shuffleArray(question.answers)
-      );
-      this.setState({
+          let temp = {};
+          temp.question = item.question;
+          temp.answers = this.convertAnswersToArray(item.answers.answers);
+          return temp;
+        });
+        this.setState({ quizQuestions: qs });
+        const shuffledAnswerOptions = qs.map(question =>
+          this.shuffleArray(question.answers)
+        );
+        this.setState({
           question: qs[0].question,
           answerOptions: shuffledAnswerOptions[0]
         });
-     })
-     .catch(err => console.log(err));
+      })
+      .catch(err => console.log(err));
   }
 
   shuffleArray(array) {
@@ -71,34 +71,32 @@ class Quiz extends Component {
 
     return array;
   }
- 
-  convertAnswersToArray = (obj) => {
+
+  convertAnswersToArray = obj => {
     let array = [];
 
     array.push({
-      type: "active", 
+      type: "active",
       content: obj.active.answer,
       gif: obj.active.gif
     });
     array.push({
-      type: "creative", 
+      type: "creative",
       content: obj.creative.answer,
       gif: obj.creative.gif
     });
     array.push({
-      type: "social", 
+      type: "social",
       content: obj.social.answer,
       gif: obj.social.gif
     });
     array.push({
-      type: "solo", 
+      type: "solo",
       content: obj.solo.answer,
       gif: obj.solo.gif
     });
     return array;
   };
-
-
 
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
@@ -170,7 +168,7 @@ class Quiz extends Component {
   render() {
     return (
       <div>
-        <QuizTitle />
+        {/* <QuizTitle /> */}
 
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>

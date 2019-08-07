@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Input, FormBtn } from "../components/Form";
 import { Link } from "react-router-dom";
 import API from "../utils/API";
+import "./login.css";
+const loginHog = require("../Images/Hedgehogs/coolHog.png");
 
 class Login extends Component {
   state = {
@@ -35,18 +37,37 @@ class Login extends Component {
   render() {
     return (
       <div className="login-div">
+        <span>
+          <img className="coolHog" src={loginHog} />
+        </span>
         <form onSubmit={this.createUser}>
-          <label>Name:</label>
-          <Input onChange={this.handleInputChange} type="text" name="name" />
-          <label>Email:</label>
-          <Input onChange={this.handleInputChange} type="text" name="email" />
-          <label>Zipcode:</label>
-          <Input onChange={this.handleInputChange} type="text" name="zipcode" />
-          <label>Password:</label>
+          {/* <label>Name:</label> */}
+          <Input
+            onChange={this.handleInputChange}
+            type="text"
+            name="name"
+            placeholder="First and Last Name"
+          />
+          {/* <label>Email:</label> */}
+          <Input
+            onChange={this.handleInputChange}
+            type="text"
+            name="email"
+            placeholder="E-mail Address"
+          />
+          {/* <label>Zipcode:</label> */}
+          <Input
+            onChange={this.handleInputChange}
+            type="text"
+            name="zipcode"
+            placeholder="Zip Code"
+          />
+          {/* <label>Password:</label> */}
           <Input
             onChange={this.handleInputChange}
             type="text"
             name="password"
+            placeholder="Password"
           />
           <FormBtn type="submit">Submit</FormBtn>
         </form>
