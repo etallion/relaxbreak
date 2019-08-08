@@ -1,6 +1,10 @@
+.col-md-12 {
+  background-color: #fac172;
+}
+
 .card {
   background: none;
-  border-radius: 2px;
+  border: transparent;
   height: 325px;
   margin: 1rem;
   position: relative;
@@ -15,6 +19,7 @@
   text-align: center;
   background: none;
 }
+
 .card > .img-container > img {
   width: 60%;
 }
@@ -24,6 +29,7 @@
   padding-right: 1rem;
   font-size: 15px;
 }
+
 img {
   display: block;
   margin: auto;
@@ -33,6 +39,7 @@ img {
   max-height: 250px;
   position: center;
 }
+
 .btn {
   position: center;
   /* width: 100%; */
@@ -51,10 +58,21 @@ img {
   justify-content: center;
   vertical-align: center;
 }
+
 /* This is for button animations */
+
 .btn:hover {
   cursor: pointer;
   animation: jelly 0.5s;
+}
+
+p {
+  text-align: center;
+}
+
+button {
+  background: transparent;
+  border: transparent;
 }
 
 @keyframes jelly {
