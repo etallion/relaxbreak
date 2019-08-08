@@ -1,0 +1,74 @@
+.card {
+  background: none;
+  border-radius: 2px;
+  height: 325px;
+  margin: 1rem;
+  position: relative;
+  width: 282.5px;
+  /* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
+  text-align: left;
+}
+
+.card > .img-container {
+  height: 60%;
+  overflow: hidden;
+  text-align: center;
+  background: none;
+}
+.card > .img-container > img {
+  width: 60%;
+}
+
+.card > .content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 15px;
+}
+img {
+  display: block;
+  margin: auto;
+  padding: auto;
+  /* width: 50%; */
+  max-width: 250px;
+  max-height: 250px;
+  position: center;
+}
+.btn {
+  position: center;
+  /* width: 100%; */
+  background: #fb844d;
+  border: #de5d3e;
+  margin: 5px;
+  text-align: center;
+  display: block;
+  width: 270px;
+  font-family: "Shadows Into Light Two", cursive;
+}
+
+.button-col {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  vertical-align: center;
+}
+/* This is for button animations */
+.btn:hover {
+  cursor: pointer;
+  animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
