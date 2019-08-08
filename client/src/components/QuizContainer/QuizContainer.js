@@ -13,6 +13,7 @@ function QuizContainer(props) {
         key={key.content}
         answerContent={key.content}
         answerType={key.type}
+        gif={key.gif}
         answer={props.answer}
         questionId={props.questionId}
         onAnswerSelected={props.onAnswerSelected}

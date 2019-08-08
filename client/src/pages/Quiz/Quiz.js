@@ -34,6 +34,7 @@ class Quiz extends Component {
      //Returns question populated with associated answers if exist
      API.getQuestions()
      .then(res => {
+      console.log(res.data);
         const qs = res.data.map(item => {
         let temp = {};
         temp.question = item.question;
@@ -48,6 +49,7 @@ class Quiz extends Component {
           question: qs[0].question,
           answerOptions: shuffledAnswerOptions[0]
         });
+        console.log(this.state.answerOptions);
      })
      .catch(err => console.log(err));
   }
