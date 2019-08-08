@@ -1,0 +1,22 @@
+.coolHog {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.login-div {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: auto;
+}
+
+.btn {
+  width: 100%;
+  max-width: 420px;
+  padding: 15px;
+  margin: auto;
+}
