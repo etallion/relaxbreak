@@ -31,18 +31,18 @@ class Personality extends React.Component {
                 </div>
               </Jumbotron>
               <Row>
-                <Col size="md-3">
+                <Col size="md-6">
                   <Card>Active</Card>
                 </Col>
-                <Col size="md-3">
+                <Col size="md-6">
                   <Card>Creative</Card>
                 </Col>
               </Row>
               <Row>
-                <Col size="md-3">
+                <Col size="md-6">
                   <Card>Social</Card>
                 </Col>
-                <Col size="md-3">
+                <Col size="md-6">
                   <Card>Solo</Card>
                 </Col>
               </Row>

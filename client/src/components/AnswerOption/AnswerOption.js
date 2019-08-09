@@ -6,8 +6,8 @@ function AnswerOption(props) {
   return (
     <li className="answerOption">
       <input
-        type="radio"
-        className="radioCustomButton"
+        type="button"
+        className="btn"
         name="radioGroup"
         checked={props.answerType === props.answer}
         id={props.answerType}
@@ -18,6 +18,7 @@ function AnswerOption(props) {
       <label className="radioCustomLabel" htmlFor={props.answerType}>
         {props.answerContent}
       </label>
+      <div><img src={props.gif} /></div>
     </li>
   );
 }
