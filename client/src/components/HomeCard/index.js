@@ -1,15 +1,13 @@
 import React from "react";
 import "./style.css";
+
 import { Link } from "react-router-dom";
-
-import baseURL from "../../Images/Hedgehogs/activeHog.png";
-
 function HomeCard(props) {
   console.log(props.image);
   return (
     <div className="card">
       <div className="img-container">
-        <img alt={props.name} src={baseURL} />
+        <img alt={props.name} src={props.image} />
       </div>
       <div className="content">
         <p> {props.content}</p>
