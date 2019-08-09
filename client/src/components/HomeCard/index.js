@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+
 import { Link } from "react-router-dom";
 function HomeCard(props) {
   console.log(props.image);
