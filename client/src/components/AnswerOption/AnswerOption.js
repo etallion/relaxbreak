@@ -6,8 +6,8 @@ function AnswerOption(props) {
   return (
     <li className="answerOption">
       <input
-        type="radio"
-        className="radioCustomButton"
+        type="button"
+        className="btn"
         name="radioGroup"
         checked={props.answerType === props.answer}
         id={props.answerType}
