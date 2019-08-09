@@ -5,9 +5,10 @@ import "./style.css";
 function AnswerOption(props) {
   return (
     <li className="answerOption">
+      {/* <div class="flexbox-container"> */}
       <input
         type="radio"
-        className="radioCustomButton"
+        className="btn"
         name="radioGroup"
         checked={props.answerType === props.answer}
         id={props.answerType}
@@ -15,10 +16,11 @@ function AnswerOption(props) {
         disabled={props.answer}
         onChange={props.onAnswerSelected}
       />
-      <label className="radioCustomLabel" htmlFor={props.answerType}>
+      <label className="btn" htmlFor={props.answerType}>
         {props.answerContent}
+        <img src={props.gif} />
       </label>
-      <div><img src={props.gif} /></div>
+      {/* </div> */}
     </li>
   );
 }
