@@ -4,26 +4,22 @@ import "./style.css";
 
 function AnswerOption(props) {
   return (
-    <div className="container" Col size="md-3">
-      <li className="answerOption">
-        <div class="flexbox-container">
-          <input
-            type="btn"
-            className="btn"
-            name="radioGroup"
-            checked={props.answerType === props.answer}
-            id={props.answerType}
-            value={props.answerType}
-            disabled={props.answer}
-            onChange={props.onAnswerSelected}
-          />
-          <label className="btn" htmlFor={props.answerType}>
-            {props.answerContent}
-            <img src={props.gif} />
-          </label>
-        </div>
-      </li>
-    </div>
+    <li className="answerOption">
+      <input
+        type="radio"
+        className="radioCustomButton"
+        name="radioGroup"
+        checked={props.answerType === props.answer}
+        id={props.answerType}
+        value={props.answerType}
+        disabled={props.answer}
+        onChange={props.onAnswerSelected}
+      />
+      <label className="radioCustomLabel" htmlFor={props.answerType}>
+        {props.answerContent}
+      </label>
+      <div><img src={props.gif} /></div>
+    </li>
   );
 }
 
