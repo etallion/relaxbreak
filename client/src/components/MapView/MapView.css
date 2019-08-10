@@ -1,0 +1,48 @@
+.mapFrame {
+    background-color: orange;
+    width: 50rem;
+    height: 40rem;
+    border: 0; 
+    display: inline-block;
+    padding: 1rem
+}
+
+.mapContainer {
+    width: 100%;
+    display: inline-flex;
+    padding: 2rem 8rem;
+    
+}
+
+.mapPlacesWrapper {
+    background-color: orange;
+    /* : 1rem 8rem; */
+    display: inline-flex;
+}
+
+.placesList {
+    width: 25%;
+    height: 40rem;
+    display: inline-block;
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem 0 1rem 1rem;
+}
+
+.mapDiv {
+    width: 75%;
+}
+
+ul {
+    background-color: white;
+} 
+
+li {
+    background-color: white;
+}
+
+.placesHeader {
+    text-align: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}

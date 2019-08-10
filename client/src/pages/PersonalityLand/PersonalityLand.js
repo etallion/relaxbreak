@@ -1,5 +1,6 @@
 import React from "react";
 import "./PersonalityLandStyle.css";
+import MapView from "../../components/MapView";
 
 // most likely will need a wrapping component to hold state (how to set state based on quiz result?)
 // MAYBE ASSIGN PERSONALITY TO USER IN DATABASE AND CREATE STATE ON THIS PAGE THAT GRABS THAT ON COMPONENT MOUNT
@@ -41,19 +42,7 @@ function PersonalityLand(props) {
         </div>
       </div>
       <h3 className="centered-title">Try these events in your area!</h3>
-
-      {/* Map the events array to make cards for events found */}
-
-      <div className="card">
-        <img
-          className="card-img-top"
-          src="https://via.placeholder.com/250"
-          alt="Local Event"
-        />
-        <div className="card-body">
-          <p className="card-text">Result</p>
-        </div>
-      </div>
+      <MapView />      
     </>
   );
 }

@@ -12,10 +12,8 @@ import Admin from "./pages/admin";
 import Quiz from "./pages/Quiz";
 import Users from "./pages/admin/Users";
 import Personality from "./pages/admin/Personality";
-// import Quiz from "./pages/Quiz/index";
 import Home from "./pages/Home";
-// import Quiz from "./pages/Home/index";
-import PersonalityLand from "./pages/PersonalityLand/PersonalityLand";
+import PersonalityLand from "./pages/PersonalityLand";
 
 function App() {
   return (
@@ -27,7 +25,7 @@ function App() {
           <Route path="/" component={Nav} />
         </Switch>
         <Switch>
-          <Route exact path="/" component={Books} />
+          <Route exact path="/" component={Home} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/home" component={Home} />
           <Route exact path="/admin/questions" component={AdminQuestions} />
