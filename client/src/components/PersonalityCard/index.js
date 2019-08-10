@@ -13,8 +13,12 @@ function PersonalityCard(props) {
     saveTerm,
     saveImage,
     saveDescription,
-    onChange
+    onChange,
+    newData
   } = props;
+  function clearInput(name) {
+    document.getElementsByName(name)[0].setAttribute("value", "");
+  }
   return (
     <Container>
       <Row>

@@ -24,29 +24,35 @@ class Personality extends React.Component {
 
   saveImage = name => {
     console.log("saving image " + name + this.state.newData);
-    const updateData = { name: name, image: this.state.newData };
-    API_P.updatePersonality(updateData);
-    this.setState({
-      newData: ""
-    });
+    if (this.state.newData) {
+      const updateData = { name: name, image: this.state.newData };
+      API_P.updatePersonality(updateData);
+      this.setState({
+        newData: ""
+      });
+    } else console.log("there are no changes to save.");
   };
   saveTerm = (name, terms) => {
-    console.log("saving term " + name + this.state.newData + terms);
-    terms.push(this.state.newData);
-    console.log(terms);
-    const updateData = { name: name, terms: terms };
-    API_P.updatePersonality(updateData);
-    this.setState({
-      newData: ""
-    });
+    if (this.state.newData) {
+      console.log("saving term " + name + this.state.newData + terms);
+      terms.push(this.state.newData);
+      console.log(terms);
+      const updateData = { name: name, terms: terms };
+      API_P.updatePersonality(updateData);
+      this.setState({
+        newData: ""
+      });
+    } else console.log("there are no changes to save.");
   };
   saveDescription = name => {
-    console.log("saving description " + name + this.state.newData);
-    const updateData = { name: name, description: this.state.newData };
-    API_P.updatePersonality(updateData);
-    this.setState({
-      newData: ""
-    });
+    if (this.state.newData) {
+      console.log("saving description " + name + this.state.newData);
+      const updateData = { name: name, description: this.state.newData };
+      API_P.updatePersonality(updateData);
+      this.setState({
+        newData: ""
+      });
+    } else console.log("there are no changes to save.");
   };
 
   render() {
