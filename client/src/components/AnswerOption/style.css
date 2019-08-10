@@ -1,19 +1,30 @@
 /* AnswerOption Component */
 
+input {
+  display: transparent;
+  background-color: #afca52;
+}
+
 div {
-  display: inline;
+  display: inLine;
+}
+
+.categoryBtn {
+  display: hidden;
+  border: transparent;
+  text-color: transparent;
 }
 
 .answerOption {
-  border-top: 1px solid #eee;
-  display: flex;
+  /* border-top: 1px solid #eee; */
+  display: inLine;
   flex-direction: row;
   max-width: 250px;
 }
 
-.answerOption:hover {
+/* .answerOption:hover {
   background-color: #eefbfe;
-}
+} */
 
 .radioCustomButton {
   position: absolute;
@@ -121,7 +132,7 @@ label.btn {
 }
 
 .type {
-  background-color: transparent;
+  color: transparent;
 }
 
 .img {

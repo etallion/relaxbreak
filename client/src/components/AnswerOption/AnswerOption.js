@@ -7,8 +7,9 @@ function AnswerOption(props) {
     <li className="answerOption">
       {/* <div class="flexbox-container"> */}
       <input
-        type="radio"
-        className="btn"
+        // type="radio"
+        // className="btn"
+        className="categoryBtn"
         name="radioGroup"
         checked={props.answerType === props.answer}
         id={props.answerType}
