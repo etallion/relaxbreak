@@ -1,7 +1,51 @@
 .quizBtnText {
   text-align: center;
+  margin: 20px 0px 20px 0px;
 }
 
 .welcomeBlurb {
   background-color: #fac172;
+}
+
+button {
+  font-family: "Walter Turncoat", cursive;
+}
+
+/* card {
+  position: center;
+} */
+
+.col-md-12 {
+  /* -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%; */
+  width: 1500px;
+}
+
+.col-md-3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.div > .card {
+  align-content: center;
+}
+
+.wrapper {
+  /* padding-top: 50px; */
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  /* padding: 40px; */
+  justify-content: space-around;
+  /* align-content: flex-start; */
+  /* overflow: auto; */
+}
+
+.card > .img-container {
+  height: 60%;
+  overflow: hidden;
+  text-align: center;
+  background: none;
 }
