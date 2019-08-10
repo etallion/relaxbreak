@@ -2,8 +2,8 @@
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-weight: bold;
-  /* float: center; */
-  /* text-align: center; */
+  float: center;
+  text-align: center;
   background: #8ed5c9;
   /* position: absolute; */
   padding: 0;
@@ -39,6 +39,6 @@ img {
 .navbar-brand {
   position: relative;
   left: 42%;
-  margin-left: -42px !important; /* 50% of your logo width */
+  margin-left: -42px !important; /*50%of your logo width*/
   display: block;
 }

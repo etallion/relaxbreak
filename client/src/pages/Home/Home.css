@@ -2,6 +2,61 @@
   text-align: center;
 }
 
-.welcomeBlurb {
+/* .welcomeBlurb {
   background-color: #fac172;
+} */
+
+.container {
+  position: relative;
+  /* max-width: 800px; */
+  /* margin: 0 auto; */
+  background: transparent;
+  /* border-radius: 3px; */
+}
+
+.img-container {
+  display: block;
+  margin: auto;
+  padding: auto;
+  /* width: 50%; */
+  width: 250px;
+  height: 250px;
+  position: center;
+}
+
+.img {
+  display: block;
+  margin: auto;
+  padding: auto;
+  /* width: 50%; */
+  max-width: 250px;
+  max-height: 250px;
+  position: center;
+}
+
+.card > .content {
+  padding: 15px;
+}
+
+.row {
+  /* display: -webkit-box;
+  display: -ms-flexbox; */
+  background-color: #fac172;
+  border-radius: 25px;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: 200px;
+  margin-right: 200px;
+  /* margin-right: -15px;
+  margin-left: -15px; */
+}
+
+button {
+  font-family: "Walter Turncoat", cursive;
+  color: #ffff;
+}
+
+@media.jumbotron {
+  width: 100%;
 }
