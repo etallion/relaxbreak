@@ -55,6 +55,7 @@ img {
   margin-left: -45px !important;
   display: block;
   color: #222;
+  border-radius: 0.25rem;
 }
 
 .nav-button:hover {

@@ -3,5 +3,6 @@ module.exports = {
   Book: require("./book"),
   Result: require("./result"),
   Question: require("./question"),
-  User: require("./user")
+  User: require("./user"),
+  Personality: require("./personality")
 };

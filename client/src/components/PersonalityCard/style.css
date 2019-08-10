@@ -1,0 +1,22 @@
+.terms-list {
+  overflow-y: auto;
+  height: 22vh;
+}
+.description-text {
+  width: 95%;
+  height: 15vh;
+}
+.personality-header {
+  margin: 10px auto 10px;
+}
+.personality-save-btn {
+  margin: 10px;
+  background: #fb844d;
+  border: #de5d3e;
+  padding: 5px 10px 5px;
+  border-radius: 0.25rem;
+}
+.personality-save-btn:hover {
+  cursor: pointer;
+  animation: jelly 0.5s;
+}
