@@ -11,6 +11,9 @@ function Nav() {
           <img src={logo} className="homeBtn" alt="logo" />
         </span>
       </Link>
+      <Link to="/login">
+        <button className="nav-button">Login</button>
+      </Link>
     </nav>
   );
 }
