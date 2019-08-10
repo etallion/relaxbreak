@@ -2,4 +2,7 @@
 .questionCount {
   padding: 1.5rem 2.5rem 0;
   font-size: 14px;
+  color: white;
+  margin-bottom: 10px;
+  font-family: "Shadows Into Light Two", cursive;
 }
