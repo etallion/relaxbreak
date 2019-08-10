@@ -53,18 +53,22 @@ class Home extends Component {
             </Col>
           </Row>
         </Container>
-        <HomeWrapper>
-          {this.state.personalityHome.map(personality => (
-            <HomeCard
-              id={personality.id}
-              key={personality.id}
-              name={personality.name}
-              image={personality.image}
-              content={personality.content}
-              button={personality.button}
-            />
-          ))}
-        </HomeWrapper>
+        <Row>
+          <HomeWrapper>
+            {this.state.personalityHome.map(personality => (
+              <Col size="md-3">
+                <HomeCard
+                  id={personality.id}
+                  key={personality.id}
+                  name={personality.name}
+                  image={personality.image}
+                  content={personality.content}
+                  button={personality.button}
+                />
+              </Col>
+            ))}
+          </HomeWrapper>
+        </Row>
         <Row>
           <Col size="md-12">
             <p className="quizBtnText">
