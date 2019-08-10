@@ -153,11 +153,11 @@ class Quiz extends Component {
   renderQuiz() {
     return (
       <QuizContainer
-        answer={this.state.answer}
-        answerOptions={this.state.answerOptions}
         questionId={this.state.questionId}
         question={this.state.question}
         questionTotal={this.state.quizQuestions.length}
+        answer={this.state.answer}
+        answerOptions={this.state.answerOptions}
         onAnswerSelected={this.handleAnswerSelected}
       />
     );

@@ -26,9 +26,8 @@ code {
 
 .container {
   position: relative;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  background: #fff;
   border-radius: 3px;
 }
 
