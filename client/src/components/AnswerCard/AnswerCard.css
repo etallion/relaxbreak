@@ -1,5 +1,5 @@
 .answerCardWrapper {
-  /* background-color: white; */
+  background-color: white;
   border: 0.05rem solid;
   border-color: #666;
   border-radius: 0.5rem;
@@ -12,7 +12,7 @@
   /* display: inline-block; */
 }
 
-.inputField {
+.adminInputField {
   width: 100%;
   display: flex;
   padding-bottom: 1rem;
@@ -30,4 +30,8 @@ input {
 
 h1 {
   display: inline-block;
+}
+
+.cardRow {
+  display: flex;
 }

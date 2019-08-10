@@ -1,0 +1,32 @@
+.adminContainer {
+    width: 100%;
+    padding-right: 8rem;
+    padding-left: 8rem;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.adminJumbotron {
+    padding: 1rem;
+    height: 10rem;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(196, 194, 194);
+}
+
+.adminBtn {
+    background-color: rgb(124, 155, 184);
+    border: 1 soild black;
+    border-radius: 3px;
+    color: white;
+}
+
+.adminBtn:hover {
+    background-color: rgb(185, 220, 250);
+    border: 1 soild black;
+    border-radius: 3px;
+
+}
