@@ -13,7 +13,8 @@ function PersonalityCard(props) {
     saveTerm,
     saveImage,
     saveDescription,
-    onChange
+    onChange,
+    deleteTerm
   } = props;
   return (
     <Container>
@@ -42,7 +43,7 @@ function PersonalityCard(props) {
               {terms.map(term => (
                 <li key={term}>
                   {term}
-                  <DeleteBtn />
+                  <DeleteBtn onClick={() => deleteTerm(term, name, terms)} />
                 </li>
               ))}
             </ul>

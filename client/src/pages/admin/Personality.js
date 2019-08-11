@@ -17,10 +17,14 @@ class Personality extends React.Component {
   };
 
   componentDidMount() {
+    this.loadPersonalities();
+  }
+
+  loadPersonalities = () => {
     API_P.getPersonalities()
       .then(res => this.setState({ personalities: res.data }))
       .catch(err => console.log(err));
-  }
+  };
 
   saveImage = name => {
     console.log("saving image " + name + this.state.newData);
@@ -43,7 +47,17 @@ class Personality extends React.Component {
         newData: ""
       });
     } else console.log("there are no changes to save.");
+    // MAYBE RELOAD PERSONALITIES WHEN A TERM IS SAVED TO CLEAR INPUT??? *******************************************
   };
+  deleteTerm = (term, name, terms) => {
+    console.log(term);
+    console.log(name);
+    const index = terms.indexOf(term);
+    terms.splice(index, 1);
+    const updateData = { name: name, terms: terms };
+    API_P.updatePersonality(updateData);
+  };
+
   saveDescription = name => {
     if (this.state.newData) {
       console.log("saving description " + name + this.state.newData);
@@ -86,6 +100,7 @@ class Personality extends React.Component {
                 onChange={event =>
                   this.setState({ newData: event.target.value })
                 }
+                deleteTerm={this.deleteTerm}
               />
             ))}
           </Row>
