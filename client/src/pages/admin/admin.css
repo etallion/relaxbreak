@@ -1,0 +1,50 @@
+body {
+    background-color: gray;
+}
+.adminContainer {
+    width: 100%;
+    padding-right: 8rem;
+    padding-left: 8rem;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.adminJumbotron {
+    padding: 3rem 1rem 1rem 1rem;
+    height: 10rem;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    /* background-color: #c4c2c2; */
+    background-color: rgb(217,221,215);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 15px;
+    color: rgb(65, 85, 104);
+    justify-content: start;
+}
+
+.adminBtn {
+    /* background-color: rgb(62, 112, 160); */
+    background-color: rgb(124, 184, 124);
+    border: 1px solid rgb(161, 161, 160);
+    border-radius: 3px;
+    color: white;
+}
+
+.adminBtn:hover {
+   /* background-color: rgb(124, 155, 184); */
+   background-color: rgb(158, 185, 158);
+    border: 1 soild black;
+    border-radius: 3px;
+
+}
+
+.saveButton {
+    width: 8rem;
+    position: absolute;
+    top: 4rem;
+    right: 10rem;
+}

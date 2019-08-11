@@ -51,20 +51,19 @@ class Login extends Component {
   render() {
     return (
       <>
-        <div className="container">
-          <form onSubmit={this.loginUser}>
-            <label>Name:</label>
-            <Input onChange={this.handleInputChange} type="text" name="name" />
-            <label>Password:</label>
-            <Input
-              onChange={this.handleInputChange}
-              type="text"
-              name="password"
-            />
-            <FormBtn type="submit">Login</FormBtn>
-          </form>
-          <FormBtn onClick={this.showCreateModal}>Create New User</FormBtn>
-        </div>
+        <form onSubmit={this.loginUser}>
+          <label>Name:</label>
+          <Input onChange={this.handleInputChange} type="text" name="name" />
+          <label>Password:</label>
+          <Input
+            onChange={this.handleInputChange}
+            type="password"
+            name="password"
+          />
+          <FormBtn type="submit">Login</FormBtn>
+        </form>
+        <FormBtn onClick={this.showCreateModal}>Create New User</FormBtn>
+
         <div
           className={
             this.state.showModal
@@ -90,6 +89,7 @@ class Login extends Component {
               name="password"
             />
             <FormBtn type="submit">Submit</FormBtn>
+            <FormBtn onClick={this.hideCreateModal}>Cancel</FormBtn>
           </form>
         </div>
       </>
