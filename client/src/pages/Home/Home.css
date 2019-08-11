@@ -4,6 +4,8 @@
 }
 
 .welcomeBlurb {
+  padding-left: auto;
+  padding-right: auto;
   background-color: #fac172;
 }
 
@@ -28,10 +30,6 @@ button {
   margin-bottom: 20px;
 }
 
-.div > .card {
-  align-content: center;
-}
-
 .wrapper {
   /* padding-top: 50px; */
   height: 100%;
@@ -48,4 +46,31 @@ button {
   overflow: hidden;
   text-align: center;
   background: none;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+h1 {
+  font-family: "Walter Turncoat", cursive;
+  text-align: auto;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+#hogCards {
+  margin: 0.5%;
+}
+
+.container {
+  position: relative;
+  /* max-width: 800px; */
+  margin: 0 auto;
+  background: #fac172;
+  border-radius: 3px;
+}
+
+.card > .content {
+  padding-left: auto;
+  padding-right: auto;
+  /* font-size: 15px; */
 }

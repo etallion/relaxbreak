@@ -16,15 +16,17 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <div>
+          <img
+            id="coolHog"
+            src="https://maxrelax.s3.amazonaws.com/gifs/coolHog.png"
+          />
+        </div>
         <Container className="welcomeBlurb">
-          {/* <Row>
-            <Col size="md-12">
-              <h1>Welcome To MaxRelax!</h1>
-            </Col>
-          </Row> */}
           <Row>
             {/* <Col size="md-4"> */}
-            <Col size="md-8">
+            <Col size="md-12">
+              <h1>Welcome To MaxRelax!</h1>
               <p>
                 There are so many choices for activities in a big city. It can
                 be a daunting task to choose one and know that it will be
@@ -36,7 +38,7 @@ class Home extends Component {
                 coming up empty-handed for ideas were a thing of the past...
               </p>
               <p>
-                Now you can with help from <strong>Max Relax</strong>, the fun
+                Now you can with help from <strong>MaxRelax</strong>, the fun
                 little hedgehog whose goal in life is for you to have a good
                 time and relax in whatever way makes you happiest!
               </p>
@@ -54,7 +56,7 @@ class Home extends Component {
             </Col>
           </Row>
         </Container>
-        <div>
+        <div id="hogCards">
           <Row>
             {/* <HomeWrapper> */}
             {this.state.personalityHome.map(personality => (

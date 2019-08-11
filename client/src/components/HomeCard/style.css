@@ -5,38 +5,50 @@
 .card {
   background: none;
   border: transparent;
-  height: 325px;
-  margin: 1rem;
+  height: 450px;
+  border-radius: 5px;
+  /* margin: 1rem; */
   position: relative;
-  width: 282.5px;
+  /* width: 300px; */
+  width: 95%;
   /* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
-  text-align: left;
+  text-align: center;
+  background-color: #afca52;
+  padding-left: auto;
+  padding-right: auto;
 }
 
 .card > .img-container {
-  height: 60%;
-  overflow: hidden;
+  height: auto;
+  width: 250px;
+  margin: 15px;
+  /* overflow: hidden; */
   text-align: center;
   background: none;
+  /* background-color: #afca; */
+  padding-left: auto;
+  padding-right: auto;
 }
 
 .card > .img-container > img {
-  width: 60%;
+  width: 250px;
+  height: 250px;
 }
 
 .card > .content {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: auto;
+  padding-right: auto;
   font-size: 15px;
 }
 
 img {
   display: block;
-  margin: auto;
-  padding: auto;
+  /* margin: 0px; */
+  /* padding-left: auto;
+  padding-right: auto; */
   /* width: 50%; */
-  max-width: 250px;
-  max-height: 250px;
+  width: 220px;
+  height: 250px;
   position: center;
 }
 
@@ -48,8 +60,9 @@ img {
   margin: 5px;
   text-align: center;
   display: block;
-  width: 270px;
+  width: auto;
   font-family: "Shadows Into Light Two", cursive;
+  margin: 5px 15px 15px 15px;
 }
 
 .button-col {
