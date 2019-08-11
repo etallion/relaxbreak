@@ -90,11 +90,10 @@ class Questions extends React.Component {
                     <div className="adminContainer">
                     <ToastContainer />
                         <div className="adminJumbotron">
-                            <div className="label"></div>
                             <div style={{"display": "inline-block"}}>
-                                <h1>{this.state.question}</h1>
+                                <h2>{this.state.question}</h2>
                             </div>
-                            <div className="label"><button className="adminBtn" onClick={this.saveAnswers}>Save</button></div>
+                            <div className="saveButton"><button className="adminBtn" onClick={this.saveAnswers}>Save</button></div>
                        
                         </div>
                         <Row>

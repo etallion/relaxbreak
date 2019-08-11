@@ -1,7 +1,8 @@
 .adminNav {
     display: flex;
     align-items: flex-start;
-    background-color: rgb(8, 76, 139);
+    /* background-color: rgb(8, 76, 139); */
+    background-color: rgb(72, 110, 124);
     box-shadow: 0 0 2rem 0;
 }
 
