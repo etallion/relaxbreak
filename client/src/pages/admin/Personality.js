@@ -6,7 +6,7 @@ import Jumbotron from "../../components/Jumbotron";
 import { Col, Container, Row } from "../../components/Grid";
 import PersonalityCard from "../../components/PersonalityCard";
 //import DeleteBtn from '../../components/DeleteBtn';
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import API_P from "../../utils/API_P";
 
@@ -17,14 +17,10 @@ class Personality extends React.Component {
   };
 
   componentDidMount() {
-    this.loadPersonalities();
-  }
-
-  loadPersonalities = () => {
     API_P.getPersonalities()
       .then(res => this.setState({ personalities: res.data }))
       .catch(err => console.log(err));
-  };
+  }
 
   saveImage = name => {
     console.log("saving image " + name + this.state.newData);
@@ -34,7 +30,7 @@ class Personality extends React.Component {
       this.setState({
         newData: ""
       });
-    } else console.log("there are no changes to save.");
+    } else toast.error("No changes to save.");
   };
   saveTerm = (name, terms) => {
     if (this.state.newData) {
@@ -46,8 +42,9 @@ class Personality extends React.Component {
       this.setState({
         newData: ""
       });
-    } else console.log("there are no changes to save.");
+    } else toast.error("No changes to save.");
     // MAYBE RELOAD PERSONALITIES WHEN A TERM IS SAVED TO CLEAR INPUT??? *******************************************
+    // MAYBE WRAPPING INPUT IN FORM WUD ALLOW EASIER CLEAR??? ****************************************
   };
   deleteTerm = (term, name, terms) => {
     console.log(term);
@@ -66,7 +63,7 @@ class Personality extends React.Component {
       this.setState({
         newData: ""
       });
-    } else console.log("there are no changes to save.");
+    } else toast.error("No changes to save.");
   };
 
   render() {

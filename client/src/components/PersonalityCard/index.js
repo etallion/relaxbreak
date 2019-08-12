@@ -40,12 +40,16 @@ function PersonalityCard(props) {
         <Col size="6">
           <div className="terms-list">
             <ul>
-              {terms.map(term => (
-                <li key={term}>
-                  {term}
-                  <DeleteBtn onClick={() => deleteTerm(term, name, terms)} />
-                </li>
-              ))}
+              {terms ? (
+                terms.map(term => (
+                  <li key={term}>
+                    {term}
+                    <DeleteBtn onClick={() => deleteTerm(term, name, terms)} />
+                  </li>
+                ))
+              ) : (
+                <li>No terms added.</li>
+              )}
             </ul>
           </div>
           <Input
