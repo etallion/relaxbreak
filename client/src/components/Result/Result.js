@@ -15,20 +15,24 @@ function Result(props) {
       transitionAppear
       transitionAppearTimeout={500}
     >
-      <Container className="cont">
+      <Container className="resultContainer">
         <Row>
           <Col size="md-12">
             You prefer <strong>{props.quizResult}</strong>!
           </Col>
         </Row>
         <Row className="image">
-          <img src="../../Images/dancing.gif" />
           <Col size="md-6" />
+
           <Col size="md-6">
-            <h1>
-              Click button below to find out activies for your perosnality type!
-            </h1>
-            <button>Click</button>
+            <h3>
+              Want to know what activites will de-stress the {props.quizResult}{" "}
+              personality type?
+            </h3>
+            <strong>
+              <p>Click the button below to find out!</p>
+            </strong>
+            <button className="resultbtn">Go to Page</button>
           </Col>
         </Row>
       </Container>

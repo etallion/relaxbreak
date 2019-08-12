@@ -4,11 +4,17 @@
   list-style: none;
   margin-bottom: 50px;
   color: white;
-
   display: flex;
   flex-direction: row;
 }
 
-/* .container {
-  color: white;
-} */
+ul {
+  /* padding-top: 50px; */
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+  justify-content: space-around;
+  align-content: flex-start;
+  width: 100%;
+}
