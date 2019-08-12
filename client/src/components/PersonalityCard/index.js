@@ -17,7 +17,7 @@ function PersonalityCard(props) {
     deleteTerm
   } = props;
   return (
-    <Container>
+    <div className="personality">
       <Row>
         <h2 className="personality-header">{name}</h2>
       </Row>
@@ -77,7 +77,7 @@ function PersonalityCard(props) {
       <button onClick={saveDescription} className="personality-save-btn">
         Save Description
       </button>
-    </Container>
+    </div>
   );
 }
 

@@ -20,3 +20,10 @@
   cursor: pointer;
   animation: jelly 0.5s;
 }
+.personality {
+  background-color: #fff;
+  width: 70vw;
+  margin: 20px auto 20px;
+  display: block;
+  padding: 15px;
+}
