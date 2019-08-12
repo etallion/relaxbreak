@@ -17,10 +17,16 @@ class Home extends Component {
     return (
       <div>
         <div>
-          <img
-            id="coolHog"
-            src="https://maxrelax.s3.amazonaws.com/gifs/coolHog.png"
-          />
+          <Row>
+            <Col size="md-3">
+              <div>
+                <img
+                  id="coolHog"
+                  src="https://maxrelax.s3.amazonaws.com/gifs/coolHog.png"
+                />
+              </div>
+            </Col>
+          </Row>
         </div>
         <Container className="welcomeBlurb">
           <Row>

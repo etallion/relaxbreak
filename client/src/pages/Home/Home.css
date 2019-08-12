@@ -55,6 +55,7 @@ h1 {
   text-align: auto;
   padding-left: auto;
   padding-right: auto;
+  justify-content: center;
 }
 
 #hogCards {

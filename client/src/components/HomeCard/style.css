@@ -1,5 +1,7 @@
 .col-md-12 {
   background-color: #fac172;
+  border-radius: 5px;
+  justify-content: right;
 }
 
 .card {
@@ -50,6 +52,8 @@ img {
   width: 220px;
   height: 250px;
   position: center;
+  padding-left: auto;
+  padding-right: auto;
 }
 
 .btn {
