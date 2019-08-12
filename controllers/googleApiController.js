@@ -10,7 +10,7 @@ module.exports = {
             location: req.body.location,
             key: KEY
         };
-        axios.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + 'coffee' +
+        axios.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + req.body.term +
             '&location=' + req.body.location +
             '&radius=10' +
             "&key=" + KEY)

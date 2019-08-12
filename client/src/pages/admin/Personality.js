@@ -6,7 +6,7 @@ import Jumbotron from "../../components/Jumbotron";
 import { Col, Container, Row } from "../../components/Grid";
 import PersonalityCard from "../../components/PersonalityCard";
 //import DeleteBtn from '../../components/DeleteBtn';
-import { ToastContainer } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import API_P from "../../utils/API_P";
 
@@ -30,7 +30,7 @@ class Personality extends React.Component {
       this.setState({
         newData: ""
       });
-    } else console.log("there are no changes to save.");
+    } else toast.error("No changes to save.");
   };
   saveTerm = (name, terms) => {
     if (this.state.newData) {
@@ -42,8 +42,19 @@ class Personality extends React.Component {
       this.setState({
         newData: ""
       });
-    } else console.log("there are no changes to save.");
+    } else toast.error("No changes to save.");
+    // MAYBE RELOAD PERSONALITIES WHEN A TERM IS SAVED TO CLEAR INPUT??? *******************************************
+    // MAYBE WRAPPING INPUT IN FORM WUD ALLOW EASIER CLEAR??? ****************************************
   };
+  deleteTerm = (term, name, terms) => {
+    console.log(term);
+    console.log(name);
+    const index = terms.indexOf(term);
+    terms.splice(index, 1);
+    const updateData = { name: name, terms: terms };
+    API_P.updatePersonality(updateData);
+  };
+
   saveDescription = name => {
     if (this.state.newData) {
       console.log("saving description " + name + this.state.newData);
@@ -52,7 +63,7 @@ class Personality extends React.Component {
       this.setState({
         newData: ""
       });
-    } else console.log("there are no changes to save.");
+    } else toast.error("No changes to save.");
   };
 
   render() {
@@ -86,6 +97,7 @@ class Personality extends React.Component {
                 onChange={event =>
                   this.setState({ newData: event.target.value })
                 }
+                deleteTerm={this.deleteTerm}
               />
             ))}
           </Row>
