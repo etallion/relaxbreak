@@ -8,6 +8,7 @@ import API_Q from "../../utils/API_Q";
 import API_A from "../../utils/API_A";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import './admin.css';
 
 class Questions extends React.Component {
   state = {
@@ -94,14 +95,13 @@ class Questions extends React.Component {
   render() {
     return (
       <div>
-        <Container fluid>
           <ToastContainer />
-          <Row>
-            <Col size="md-12">
-              <Jumbotron>
+          
+            <div className="adminContainer">
+              <div className="adminJumbotron">
                 <h1>Questions </h1>{" "}
                 <h5>Count: {this.state.questions.length}</h5>
-              </Jumbotron>
+              </div>
 
               <List>
                 {Boolean(this.state.questions.length) ? (
@@ -124,9 +124,7 @@ class Questions extends React.Component {
                   </button>
                 </ListItem>
               </List>
-            </Col>
-          </Row>
-        </Container>
+            </div>
       </div>
     );
   }

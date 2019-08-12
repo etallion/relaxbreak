@@ -1,11 +1,12 @@
 import React from 'react';
 import AnswerCard from '../../components/AnswerCard';
 import Jumbotron from '../../components/Jumbotron';
-import { Col, Container, Row } from '../../components/Grid';
+import { Col, Row } from '../../components/Grid';
 import API_A from '../../utils/API_A';
 import API_Q from '../../utils/API_Q';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import './admin.css';
 
 class Questions extends React.Component {
     state = {
@@ -86,18 +87,15 @@ class Questions extends React.Component {
     render() {
       return (
         <div>
-            <Container fluid>
-                <Row>
-                    <Col size="md-12">
+                    <div className="adminContainer">
                     <ToastContainer />
-                        <Jumbotron>
-                            <div className="label"></div>
+                        <div className="adminJumbotron">
                             <div style={{"display": "inline-block"}}>
-                                <h1>{this.state.question}</h1>
+                                <h2>{this.state.question}</h2>
                             </div>
-                            <div className="label"><button className="primary-btn btn" onClick={this.saveAnswers}>Save</button></div>
+                            <div className="saveButton"><button className="adminBtn" onClick={this.saveAnswers}>Save</button></div>
                        
-                        </Jumbotron>
+                        </div>
                         <Row>
                             <Col size="md-6">
                                 <AnswerCard 
@@ -135,9 +133,7 @@ class Questions extends React.Component {
                             </Col>
                         </Row>
                       
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
         </div>
       );
     }
