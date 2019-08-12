@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-// import quizQuestions from "../../api/quizQuestions";
-// import Nav from "../../components/Nav";
-// import QuizTitle from "../../components/QuizTitle/QuizTitle";
-
-// import Quiz from "./components/Quiz";
 import Result from "../../components/Result/Result";
-// import logo from "../../Images/Hedgehogs/logoHog.png";
 import "./Quiz.css";
 import QuizContainer from "../../components/QuizContainer/QuizContainer";
 // import { Link } from "react-router-dom";

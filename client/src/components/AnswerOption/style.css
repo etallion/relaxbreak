@@ -1,17 +1,33 @@
 /* AnswerOption Component */
-
 .answerOption {
-  /* border-top: 1px solid #eee; */
-  margin: 5px;
+  margin: 8px;
 }
-
 .answerOption:hover {
   background-color: #afca52;
   padding: 20px;
+
+  cursor: pointer;
+  animation: jelly 0.5s;
+}
+
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
 }
 
 .radioCustomButton {
-  /* position: absolute; */
+  position: absolute;
   width: auto;
   opacity: 0;
 }
@@ -25,9 +41,7 @@
 }
 
 .radioCustomLabel {
-  /* position: relative; */
   width: 100%;
-  /* margin: 5px; */
   padding: 1rem 1rem 1rem 1rem;
   font-size: 20px;
   line-height: 1.5;
@@ -36,18 +50,17 @@
 }
 
 .radioCustomButton ~ .radioCustomLabel:before {
-  /* position: absolute; */
-  /* top: 20px;
+  position: absolute;
+  top: 20px;
   left: 38px;
   width: 20px;
-  height: 28px; */
+  height: 28px;
   content: "";
   display: flex;
   flex-direction: row;
-  /* vertical-align: middle; */
-  /* background: #fff; */
-  /* border: 1px solid #bbb; */
-  /* border-radius: 50%; */
+  vertical-align: middle;
+  border: 1px solid #bbb;
+  border-radius: 50%;
   transition: all 0.3s;
 }
 
@@ -90,8 +103,8 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-img {
-  width: 100%;
+/* img {
+  width: 282.5px;
   display: flex;
   flex-direction: row;
-}
+} */
