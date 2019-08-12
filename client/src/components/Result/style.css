@@ -2,3 +2,24 @@
 .result {
   padding: 1.5rem 2.5rem;
 }
+
+h3 {
+  font-family: "Shadows Into Light Two", cursive;
+  text-align: center;
+}
+
+.resultbtn {
+  margin: 30px;
+  font-size: 18px;
+  height: 65px;
+  width: 250px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 0px 2px rgba (0, 0, 0, 0.3);
+  background-color: green !important;
+  cursor: pointer;
+}
+
+/* .image {
+  background-image: url("../../Images/dancing.gif");
+} */

@@ -1,34 +1,74 @@
 .answerCardWrapper {
-    background-color: white;
-    border: 0.05rem solid;
-    border-color: #666;
-    border-radius: .5rem;
-    padding: 0.5rem 0.5rem;
-    margin-bottom: 1rem;
-    width: 100%;
-    height: auto;
-    text-justify: kashida;
-    text-align: center;
-    /* display: inline-block; */
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: flex-start;
+  overflow: auto;
 }
 
-.inputField {
-    width: 80%;
-    display: inline-block;
-    padding-bottom: 1rem;
-   
+.adminInputField {
+  width: 100%;
+  padding: 1rem;
 }
 
 .label {
-    width: 6rem;
-    display: inline-block;
-    vertical-align: middle;
+  width: 8rem;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 1rem;
 }
 
 input {
-    width: 100%;
+  width: 100%;
 }
 
 h1 {
-    display: inline-block;
+  display: inline-block;
+}
+
+.cardRow {
+  display: flex;
+}
+
+.personalityHeader {
+  background-color: rgb(62, 112, 160);
+  background-color: rgb(124, 155, 184);
+  color: white;
+  font-style: italic;
+  font-variant-caps: small-caps;
+  /* text-align: left;
+  padding-left: 2rem; */
+}
+
+.hoverDiv {
+  position: absolute;
+  top: 3px;
+  left: 20px;
+  /* display: none; */
+}
+
+/* .tooltip-inner {
+  background-color: #fff;
+  padding: 0;
+} */
+
+#tooltip-top > .tooltip-inner {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #062e56;
+  padding: 0;
+}
+
+#tooltip-top > .tooltip-arrow {
+  border-top: 5px solid #062e56;
+  background-color: #fff;
+}
+
+#tooltip-top > img {
+  margin: 0;
+}
+
+i > .eyeCon {
+  color: rgb(230, 230, 230);
 }

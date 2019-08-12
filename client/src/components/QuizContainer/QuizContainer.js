@@ -52,15 +52,3 @@ QuizContainer.propTypes = {
 };
 
 export default QuizContainer;
-
-// const Quiz = (props) => {
-
-//     return (
-//         <div className="quizWrapper">
-//             Quiz
-
-//         </div>
-//     )
-// };
-
-// export default Quiz;

@@ -43,3 +43,23 @@ img {
   margin-left: -42px !important; /* 50% of your logo width */
   display: block;
 }
+
+.nav-button {
+  background: #fb844d;
+  border: #de5d3e;
+  /* margin: 50px; */
+  text-align: center;
+  padding: 10px 30px;
+  font-family: "Shadows Into Light Two", cursive;
+  position: relative;
+  left: 45%;
+  margin-left: -45px !important;
+  display: block;
+  color: #222;
+  border-radius: 0.25rem;
+}
+
+.nav-button:hover {
+  cursor: pointer;
+  animation: jelly 0.5s;
+}
