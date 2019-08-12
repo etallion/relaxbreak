@@ -14,7 +14,7 @@ module.exports = {
             '&location=' + req.body.location +
             '&radius=10' +
             "&key=" + KEY)
-        .then(result => res.json(result.data))
+        .then(result => res.json(req.body))
         .catch(err => res.status(422).json(err));
     }
 };

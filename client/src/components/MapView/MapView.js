@@ -18,8 +18,9 @@ class MapView extends React.Component {
         API.getPlaces(this.query)
         .then(res => {
             console.log("then statement");
-            this.setState({places: res.data.results});
-            console.log(this.state.places);
+            console.log(res);
+            // this.setState({places: res.data.results});
+            // console.log(this.state.places);
         });
 
     };
