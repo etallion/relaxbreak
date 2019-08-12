@@ -22,5 +22,8 @@ export default {
   },
   getUsers: function() {
     return axios.get("/api/userRoutes");
+  },
+  getUser: function(name) {
+    return axios.get("api/userRoutes/login", name);
   }
 };
