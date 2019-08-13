@@ -52,13 +52,13 @@ class Login extends Component {
   render() {
     return (
       <>
-        <Link to="/">
-          <img
-            id="coolHog"
-            src="https://maxrelax.s3.amazonaws.com/gifs/coolHog.png"
-          />
-        </Link>
         <div className="login-div">
+          <Link to="/">
+            <img
+              id="coolHog"
+              src="https://maxrelax.s3.amazonaws.com/gifs/coolHog.png"
+            />
+          </Link>
           <form onSubmit={this.loginUser}>
             <label>Name:</label>
             <Input onChange={this.handleInputChange} type="text" name="name" />
