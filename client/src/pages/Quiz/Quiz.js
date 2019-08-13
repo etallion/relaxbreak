@@ -72,22 +72,22 @@ class Quiz extends Component {
     let array = [];
 
     array.push({
-      type: "active",
+      type: "Active",
       content: obj.active.answer,
       gif: obj.active.gif
     });
     array.push({
-      type: "creative",
+      type: "Creative",
       content: obj.creative.answer,
       gif: obj.creative.gif
     });
     array.push({
-      type: "social",
+      type: "Social",
       content: obj.social.answer,
       gif: obj.social.gif
     });
     array.push({
-      type: "solo",
+      type: "Solo",
       content: obj.solo.answer,
       gif: obj.solo.gif
     });
@@ -158,7 +158,11 @@ class Quiz extends Component {
   }
 
   renderResult() {
-    return <Result quizResult={this.state.result} />;
+    return (
+      <div className="resultContainer">
+        <Result quizResult={this.state.result} />
+      </div>
+    );
   }
 
   render() {
