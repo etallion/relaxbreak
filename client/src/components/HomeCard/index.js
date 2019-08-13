@@ -14,7 +14,9 @@ function HomeCard(props) {
       </div>
       <div className="btn">
         <div className="button-col">
-          <button> {props.button} </button>
+          <Link to={`/personality/${props.name}`}>
+            <button> {props.button} </button>
+          </Link>
         </div>
       </div>
     </div>
