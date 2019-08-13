@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { CSSTransition } from "react-transition-group";
 import { Container, Row, Col } from "../../components/Grid";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 function Result(props) {
   return (
@@ -15,26 +16,43 @@ function Result(props) {
       transitionAppear
       transitionAppearTimeout={500}
     >
-      <Container className="cont">
+      <Container>
         <Row>
           <Col size="md-12">
-            You prefer <strong>{props.quizResult}</strong>!
+            <strong>
+              {" "}
+              <p className="resultName">You prefer {props.quizResult}</p>
+            </strong>
           </Col>
         </Row>
-        <Row className="image">
-          <img src="../../Images/dancing.gif" />
-          <Col size="md-6" />
-          <Col size="md-6">
-            <h1>
-              Click button below to find out activies for your perosnality type!
-            </h1>
-            <button>Click</button>
+        <Row>
+          <Col size="md-12">
+            <img
+              className="coolImg"
+              src={require("../../Images/Hedgehogs/coolHog.png")}
+              alt="loading..."
+            />
+          </Col>
+        </Row>
+        <Row>
+          <Col size="md-12">
+            <h3>
+              Want to know what activites will de-stress the {props.quizResult}{" "}
+              personality type?
+            </h3>
+            <strong>
+              <p>Click the button below to find out!</p>
+            </strong>
+          </Col>
+        </Row>
+        <Row>
+          <Col size="md-12">
+            <Link to={`/personality/${props.quizResult}`}>
+              <button className="resultbtn">Go to Page</button>
+            </Link>
           </Col>
         </Row>
       </Container>
-      {/* <div className="resultCont">
-        You prefer <strong>{props.quizResult}</strong>!
-      </div> */}
     </CSSTransition>
   );
 }

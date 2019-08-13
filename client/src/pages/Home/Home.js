@@ -16,14 +16,23 @@ class Home extends Component {
   render() {
     return (
       <div>
+        <div>
+          <Row>
+            <Col size="md-3">
+              <div>
+                <img
+                  id="coolHog"
+                  src="https://maxrelax.s3.amazonaws.com/gifs/coolHog.png"
+                />
+              </div>
+            </Col>
+          </Row>
+        </div>
         <Container className="welcomeBlurb">
-          {/* <Row>
+          <Row>
+            {/* <Col size="md-4"> */}
             <Col size="md-12">
               <h1>Welcome To MaxRelax!</h1>
-            </Col>
-          </Row> */}
-          <Row>
-            <Col size="md-12">
               <p>
                 There are so many choices for activities in a big city. It can
                 be a daunting task to choose one and know that it will be
@@ -35,9 +44,9 @@ class Home extends Component {
                 coming up empty-handed for ideas were a thing of the past...
               </p>
               <p>
-                Now you can with help from Max Relax, the fun little hedgehog
-                whose goal in life is for you to have a good time and relax in
-                whatever way makes you happiest!
+                Now you can with help from <strong>MaxRelax</strong>, the fun
+                little hedgehog whose goal in life is for you to have a good
+                time and relax in whatever way makes you happiest!
               </p>
               <p>
                 Based on our proprietary quiz, we can help you get to know your
@@ -53,18 +62,24 @@ class Home extends Component {
             </Col>
           </Row>
         </Container>
-        <HomeWrapper>
-          {this.state.personalityHome.map(personality => (
-            <HomeCard
-              id={personality.id}
-              key={personality.id}
-              name={personality.name}
-              image={personality.image}
-              content={personality.content}
-              button={personality.button}
-            />
-          ))}
-        </HomeWrapper>
+        <div id="hogCards">
+          <Row>
+            {/* <HomeWrapper> */}
+            {this.state.personalityHome.map(personality => (
+              <Col size="md-3">
+                <HomeCard
+                  id={personality.id}
+                  key={personality.id}
+                  name={personality.name}
+                  image={personality.image}
+                  content={personality.content}
+                  button={personality.button}
+                />
+              </Col>
+            ))}
+            {/* </HomeWrapper> */}
+          </Row>
+        </div>
         <Row>
           <Col size="md-12">
             <p className="quizBtnText">
