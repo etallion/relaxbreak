@@ -1,6 +1,5 @@
 import React from 'react';
 import AnswerCard from '../../components/AnswerCard';
-import Jumbotron from '../../components/Jumbotron';
 import { Col, Row } from '../../components/Grid';
 import API_A from '../../utils/API_A';
 import API_Q from '../../utils/API_Q';

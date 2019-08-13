@@ -1,8 +1,6 @@
 import React from "react";
-import Jumbotron from "../../components/Jumbotron";
 import { List, ListItem } from "../../components/List";
 import { Link } from "react-router-dom";
-import { Col, Container, Row } from "../../components/Grid";
 import DeleteBtn from "../../components/DeleteBtn";
 import API_Q from "../../utils/API_Q";
 import API_A from "../../utils/API_A";
