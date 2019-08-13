@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Input, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 class Login extends Component {
   state = {
@@ -51,19 +52,26 @@ class Login extends Component {
   render() {
     return (
       <>
-        <form onSubmit={this.loginUser}>
-          <label>Name:</label>
-          <Input onChange={this.handleInputChange} type="text" name="name" />
-          <label>Password:</label>
-          <Input
-            onChange={this.handleInputChange}
-            type="password"
-            name="password"
+        <Link to="/">
+          <img
+            id="coolHog"
+            src="https://maxrelax.s3.amazonaws.com/gifs/coolHog.png"
           />
-          <FormBtn type="submit">Login</FormBtn>
-        </form>
-        <FormBtn onClick={this.showCreateModal}>Create New User</FormBtn>
-
+        </Link>
+        <div className="login-div">
+          <form onSubmit={this.loginUser}>
+            <label>Name:</label>
+            <Input onChange={this.handleInputChange} type="text" name="name" />
+            <label>Password:</label>
+            <Input
+              onChange={this.handleInputChange}
+              type="password"
+              name="password"
+            />
+            <FormBtn type="submit">Login</FormBtn>
+          </form>
+          <FormBtn onClick={this.showCreateModal}>Create New User</FormBtn>
+        </div>
         <div
           className={
             this.state.showModal
