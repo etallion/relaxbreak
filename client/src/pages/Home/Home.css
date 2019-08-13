@@ -7,6 +7,11 @@
   padding-left: auto;
   padding-right: auto;
   background-color: #fac172;
+  width: 1500px;
+  background-color: #fac172;
+  border-radius: 5px;
+  justify-content: right;
+  padding: 15px;
 }
 
 button {
@@ -22,7 +27,6 @@ button {
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
   max-width: 100%; */
-  width: 1500px;
 }
 
 .col-md-3 {
@@ -75,3 +79,14 @@ h1 {
   padding-right: auto;
   /* font-size: 15px; */
 }
+
+/* 
+
+HOG STYLE:
+background-image: url(https://maxrelax.s3.amazonaws.com/gifs/coolHog.png);
+height: 100%;
+background-position-x: center;
+background-size: contain;
+background-repeat: round;
+
+*/
