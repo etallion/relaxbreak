@@ -30,10 +30,10 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route exact path="/admin/questions" component={AdminQuestions} />
           <Route exact path="/admin/questions/:id" component={AdminAnswers} />
-          <Route exact path="/admin/personality" component={Personality} />
+          <Route exact path="/admin/personality/" component={Personality} />
           <Route exact path="/admin/users" component={Users} />
           <Route exact path="/admin" component={Admin} />
-          <Route exact path="/personality" component={PersonalityLand} />
+          <Route exact path="/personality/:type" component={PersonalityLand} />
           <Route component={NoMatch} />
         </Switch>
       </div>

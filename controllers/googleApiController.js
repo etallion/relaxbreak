@@ -6,15 +6,15 @@ module.exports = {
     search: function(req, res) {
         console.log(req.body);
         const newObj = {
-            term: req.body.term,
-            location: req.body.location,
+            term: req.params.term,
+            location: req.params.location,
             key: KEY
         };
-        axios.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + req.body.term +
-            '&location=' + req.body.location +
+        axios.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + req.params.term +
+            '&location=' + req.params.location +
             '&radius=10' +
             "&key=" + KEY)
-        .then(result => res.json(req.body))
+        .then(result => res.json(result.data))
         .catch(err => res.status(422).json(err));
     }
 };
