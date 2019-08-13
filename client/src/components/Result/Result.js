@@ -47,12 +47,7 @@ function Result(props) {
         </Row>
         <Row>
           <Col size="md-12">
-            <Link
-              to="/personality/"
-              onClick={quizResult => {
-                console.log(quizResult);
-              }}
-            >
+            <Link to={`/personality/${props.quizResult}`}>
               <button className="resultbtn">Go to Page</button>
             </Link>
           </Col>
