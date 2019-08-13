@@ -7,6 +7,14 @@ import { Container, Row, Col } from "../../components/Grid";
 import QuizButton from "../../components/QuizButton";
 import { Link } from "react-router-dom";
 
+const hogStyle = {
+  backgroundImage: "url(https://maxrelax.s3.amazonaws.com/gifs/coolHog.png)",
+  height: "100%",
+  backgroundPositionX: "center",
+  backgroundSize: "contain",
+  backgroundRepeat: "round"
+};
+
 class Home extends Component {
   // Setting this.state.friends to the friends json array
   state = {
@@ -18,20 +26,28 @@ class Home extends Component {
       <div>
         <div>
           <Row>
-            <Col size="md-3">
+            {/* <Col size="md-3">
               <div>
                 <img
                   id="coolHog"
                   src="https://maxrelax.s3.amazonaws.com/gifs/coolHog.png"
                 />
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </div>
-        <Container className="welcomeBlurb">
+        <Container classes="welcomeBlurb">
           <Row>
             {/* <Col size="md-4"> */}
-            <Col size="md-12">
+            <Col size="md-2">
+              <div style={hogStyle}>
+                {/* <img
+                  id="coolHog"
+                  src="https://maxrelax.s3.amazonaws.com/gifs/coolHog.png"
+                /> */}
+              </div>
+            </Col>
+            <Col size="md-10" classes="text-center">
               <h1>Welcome To MaxRelax!</h1>
               <p>
                 There are so many choices for activities in a big city. It can
