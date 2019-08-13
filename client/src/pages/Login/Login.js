@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Input, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
 import "./Login.css";
+import { Container, Row, Col } from "../../components/Grid";
 
 class Login extends Component {
   state = {
@@ -51,18 +52,28 @@ class Login extends Component {
   render() {
     return (
       <>
+        <Col size="md-12">
+          <div>
+            <img
+              id="coolHog"
+              src="https://maxrelax.s3.amazonaws.com/gifs/coolHog.png"
+            />
+          </div>
+        </Col>
         <form onSubmit={this.loginUser}>
-          <label>Name:</label>
-          <Input onChange={this.handleInputChange} type="text" name="name" />
-          <label>Password:</label>
-          <Input
-            onChange={this.handleInputChange}
-            type="password"
-            name="password"
-          />
-          <FormBtn type="submit">Login</FormBtn>
+          <div>
+            <label>Name:</label>
+            <Input onChange={this.handleInputChange} type="text" name="name" />
+            <label>Password:</label>
+            <Input
+              onChange={this.handleInputChange}
+              type="password"
+              name="password"
+            />
+            <FormBtn type="submit">Login</FormBtn>
+            <FormBtn onClick={this.showCreateModal}>Create New User</FormBtn>
+          </div>
         </form>
-        <FormBtn onClick={this.showCreateModal}>Create New User</FormBtn>
 
         <div
           className={
