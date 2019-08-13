@@ -1,18 +1,24 @@
 .quizBtn {
   /* width: 100%; */
-  background: #fb844d;
-  border: #de5d3e;
+  background: #afca52;
   /* margin: 50px; */
   text-align: center;
   width: 200px;
-  padding: 20px;
-  font-family: "Shadows Into Light Two", cursive;
-  font-size: 2rem;
+  /* padding-top: 20px;
+  padding-bottom: 20px; */
+  font-family: "Walter Turncoat", cursive;
+  /* font-size: 2rem; */
   position: relative;
   left: 45%;
   margin-left: -45px !important;
   display: block;
   color: #222;
+  margin-bottom: 50px;
+}
+
+.col-md-12 {
+  width: 100%;
+  padding: 0;
 }
 
 /* This is for button animations */
