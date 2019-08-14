@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import { Input, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
 import "./Login.css";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { set } from "mongoose";
 
 class Login extends Component {
   state = {
@@ -11,12 +14,25 @@ class Login extends Component {
     zipcode: 0,
     password: "",
     fb_id: "",
-    showModal: false
+    showModal: false,
+    loggedIn: false
   };
 
   loginUser = event => {
     event.preventDefault();
-    console.log("I will log you in (but not really...)");
+    API.signIn({email: this.state.email, password: this.state.password})
+      .then(res => {
+        console.log(res);
+        if(res.data.status === 200){
+          toast.success("Welcome back, " + res.data.name.split(" ")[0] + "!");
+          this.props.setAuth({name: res.data.name, auth: true});
+          setTimeout(() => this.setState({loggedIn: true}), 2000);
+        } else if (res.data.status === 400) {
+          toast.error("Hmmm, that info doesn't seem match");
+        }
+        toast.update(res.statusText);
+      })
+      .catch(err => toast.error("Houston, we have a problem ", err.message));
   };
 
   showCreateModal = event => {
@@ -38,7 +54,12 @@ class Login extends Component {
         zipcode: this.state.zipcode,
         password: this.state.password,
         fb_id: this.state.fb_id
-      });
+      })
+      .then(res => {
+        toast.success("Created New User");
+        this.setState({showModal: false});
+      })
+      .catch(err => toast.error(err.message));
     }
   };
 
@@ -50,8 +71,14 @@ class Login extends Component {
   };
 
   render() {
+    if(this.state.loggedIn === true) {
+      return <Redirect to='/' />
+    }
+
     return (
       <>
+        
+        <ToastContainer />
         <div className="login-div">
           <Link to="/">
             <img
@@ -60,8 +87,8 @@ class Login extends Component {
             />
           </Link>
           <form onSubmit={this.loginUser}>
-            <label>Name:</label>
-            <Input onChange={this.handleInputChange} type="text" name="name" />
+            <label>Email:</label>
+            <Input onChange={this.handleInputChange} type="text" name="email" />
             <label>Password:</label>
             <Input
               onChange={this.handleInputChange}

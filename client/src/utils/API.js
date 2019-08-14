@@ -22,5 +22,8 @@ export default {
   },
   getUsers: function() {
     return axios.get("/api/userRoutes");
+  },
+  signIn: function(signInData) {
+    return axios.post("/api/userRoutes/signIn", signInData);
   }
 };
