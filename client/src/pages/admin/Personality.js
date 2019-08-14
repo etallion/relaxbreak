@@ -30,6 +30,7 @@ class Personality extends React.Component {
       this.setState({
         newData: ""
       });
+      toast.success("Changes added successfully!");
     } else toast.error("No changes to save.");
   };
   saveTerm = (name, terms) => {
@@ -42,9 +43,8 @@ class Personality extends React.Component {
       this.setState({
         newData: ""
       });
+      toast.success("Changes added successfully!");
     } else toast.error("No changes to save.");
-    // MAYBE RELOAD PERSONALITIES WHEN A TERM IS SAVED TO CLEAR INPUT??? *******************************************
-    // MAYBE WRAPPING INPUT IN FORM WUD ALLOW EASIER CLEAR??? ****************************************
   };
   deleteTerm = (term, name, terms) => {
     console.log(term);
@@ -53,6 +53,9 @@ class Personality extends React.Component {
     terms.splice(index, 1);
     const updateData = { name: name, terms: terms };
     API_P.updatePersonality(updateData);
+    this.setState({
+      newData: ""
+    });
   };
 
   saveDescription = name => {
@@ -63,6 +66,7 @@ class Personality extends React.Component {
       this.setState({
         newData: ""
       });
+      toast.success("Changes added successfully!");
     } else toast.error("No changes to save.");
   };
 
