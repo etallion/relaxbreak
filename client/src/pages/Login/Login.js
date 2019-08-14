@@ -5,6 +5,7 @@ import "./Login.css";
 import { Link, Redirect } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { set } from "mongoose";
 
 class Login extends Component {
   state = {
@@ -52,7 +53,12 @@ class Login extends Component {
         zipcode: this.state.zipcode,
         password: this.state.password,
         fb_id: this.state.fb_id
-      });
+      })
+      .then(res => {
+        toast.success("Created New User");
+        this.setState({showModal: false});
+      })
+      .catch(err => toast.error(err.message));
     }
   };
 
