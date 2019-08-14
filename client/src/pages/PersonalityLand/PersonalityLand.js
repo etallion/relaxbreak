@@ -51,7 +51,7 @@ render() {
         </div>
       </div>
       <h3 className="centered-title">Try these events in your area!</h3>
-      <MapView keyWords={this.state.myPersonality.terms ? this.state.myPersonality.terms : ['Southern Methodist University']}/>      
+      <MapView auth={this.props.auth} keyWords={this.state.myPersonality.terms ? this.state.myPersonality.terms : ['Southern Methodist University']}/>      
     </>
   );
 }
