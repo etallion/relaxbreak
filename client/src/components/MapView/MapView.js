@@ -4,6 +4,7 @@ import API from '../../utils/API_places';
 import PlaceCard from '../PlaceCard';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import API_P from '../../utils/API_P';
+import { relative } from 'path';
 
 
 
@@ -33,6 +34,12 @@ export class MapView extends React.Component {
     };
 
     render() {
+        const style = {
+            // "position": "relative",
+            // "display": "inline-block",
+            "width": "58%",
+            "left": "30rem"
+        }
         return (
             <div className="mapContainer">
                 <div className="mapPlacesWrapper">
@@ -47,7 +54,7 @@ export class MapView extends React.Component {
                 </div>
                 
                 <div className="mapView">
-                    <Map google={this.props.google} zoom={14} initialCenter={this.state.initialCenter} >
+                    <Map google={this.props.google} zoom={14} initialCenter={this.state.initialCenter} containerStyle={style} className="mapView">
                         {this.state.places.map(place => (
                              <Marker
                              title={place.name}
