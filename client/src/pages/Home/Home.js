@@ -8,7 +8,6 @@ import QuizButton from "../../components/QuizButton";
 import { Link } from "react-router-dom";
 
 class Home extends Component {
-  // Setting this.state.friends to the friends json array
   state = {
     personalityHome
   };
@@ -64,7 +63,6 @@ class Home extends Component {
         </Container>
         <div id="hogCards">
           <Row>
-            {/* <HomeWrapper> */}
             {this.state.personalityHome.map(personality => (
               <Col size="md-3">
                 <HomeCard
@@ -77,14 +75,13 @@ class Home extends Component {
                 />
               </Col>
             ))}
-            {/* </HomeWrapper> */}
           </Row>
         </div>
         <Row>
           <Col size="md-12">
             <p className="quizBtnText">
               Can't figure out which personality type best suits your relaxation
-              needs? Take the quiz below to find out!
+              needs... Then take the quiz below to find out!
             </p>
           </Col>
         </Row>
