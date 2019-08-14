@@ -16,7 +16,7 @@ module.exports = {
     db.User.findOne({email: req.body.email})
       .then(dbModel => {
         if(dbModel.password === req.body.password){
-          res.json({name: dbModel.name, status: 200, statusText: "Successfully logged in"});
+          res.json({name: dbModel.name, zipcode: dbModel.zipcode, status: 200, statusText: "Successfully logged in"});
         }
         res.json({status: 400, statusText: "User login information didn't match."});
         // res.json(req.body);

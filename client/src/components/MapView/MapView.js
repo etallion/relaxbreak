@@ -11,13 +11,14 @@ import { relative } from 'path';
 export class MapView extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {places: [], initialCenter: {lat: 32.8374986, lng: -96.77371819999999}};
+        this.state = {places: [], initialCenter: {lat: 32.874, lng: -96.709}};
       }
 
       query = {
           term:  this.props.keyWords[0],
-          location: 'Dallas, TX'
+          location: this.props.auth.zipcode
       };
+      
   
 
     componentDidMount(){
@@ -31,12 +32,12 @@ export class MapView extends React.Component {
             this.setState({initialCenter: this.state.places[0].geometry.location})
         });
 
+        
+        console.log(this.props.auth);
     };
 
     render() {
         const style = {
-            // "position": "relative",
-            // "display": "inline-block",
             "width": "58%",
             "left": "30rem"
         }
@@ -54,7 +55,7 @@ export class MapView extends React.Component {
                 </div>
                 
                 <div className="mapView">
-                    <Map google={this.props.google} zoom={14} initialCenter={this.state.initialCenter} containerStyle={style} className="mapView">
+                    <Map google={this.props.google} zoom={10} initialCenter={this.state.initialCenter} containerStyle={style} className="mapView">
                         {this.state.places.map(place => (
                              <Marker
                              title={place.name}

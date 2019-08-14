@@ -13,7 +13,7 @@ function Nav(props) {
         </span>
       </Link>
       {props.auth.auth ? (
-        <div>Hi, {props.auth.name}</div>
+        <div><h4>Hello, {props.auth.name.split(" ")[0]}</h4></div>
       ) : (
         <Link to="/login">
           <button className="nav-button">Login</button>

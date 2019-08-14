@@ -35,7 +35,7 @@ function App() {
           <Route exact path="/admin/personality/" component={Personality} />
           <Route exact path="/admin/users" component={Users} />
           <Route exact path="/admin" component={Admin} />
-          <Route exact path="/personality/:type" component={PersonalityLand} />
+          <Route exact path="/personality/:type" render={({match}) => <PersonalityLand auth={auth} match={match} />} />
           <Route component={NoMatch} />
         </Switch>
       </div>
