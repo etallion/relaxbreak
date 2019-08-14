@@ -5,5 +5,10 @@ router
   .route("/")
   .get(userController.getUsers)
   .post(userController.create);
+ 
+router
+  .route("/signIn")
+  .post(userController.signIn);
+
 
 module.exports = router;
