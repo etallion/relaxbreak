@@ -20,3 +20,6 @@
   cursor: pointer;
   animation: jelly 0.5s;
 }
+ul {
+  display: block;
+}
