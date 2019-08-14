@@ -25,6 +25,7 @@ class Login extends Component {
         console.log(res);
         if(res.data.status === 200){
           toast.success("Welcome back, " + res.data.name.split(" ")[0] + "!");
+          this.props.setAuth({name: res.data.name, auth: true});
           setTimeout(() => this.setState({loggedIn: true}), 2000);
         } else if (res.data.status === 400) {
           toast.error("Hmmm, that info doesn't seem match");
