@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Result from "../../components/Result/Result";
 import "./Quiz.css";
 import QuizContainer from "../../components/QuizContainer/QuizContainer";
-import { Container, Row, Col } from "../../components/Grid";
 // import { Link } from "react-router-dom";
 
 import API from "../../utils/API_Q";
@@ -161,15 +160,9 @@ class Quiz extends Component {
   renderResult() {
     return (
       <QuizContainer>
-        <Container>
-          <Row>
-            <Col size="md-12">
-              <div className="resultContainer">
-                <Result quizResult={this.state.result} />
-              </div>
-            </Col>
-          </Row>
-        </Container>
+        <div className="resultContainer">
+          <Result quizResult={this.state.result} />
+        </div>
       </QuizContainer>
     );
   }

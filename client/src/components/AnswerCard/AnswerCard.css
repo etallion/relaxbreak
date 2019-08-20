@@ -37,6 +37,7 @@ input {
 
 .cardRow {
   display: flex;
+  flex-direction: row;
 }
 
 .personalityHeader {
