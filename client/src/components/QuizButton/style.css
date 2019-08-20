@@ -1,14 +1,20 @@
 .quizBtn {
   background: #afca52;
   text-align: center;
-  width: 30%;
-  height: 60px;
   margin: 0 auto;
+  padding: 10px;
   font-family: "Walter Turncoat", cursive;
-  margin-left: 38% !important;
   color: #222;
   margin-bottom: 30px;
   font-size: 25px;
+  margin-top: 20px;
+  height: 65px;
+  width: 250px;
+  border-radius: 10px;
+  border-color: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /* This is for button animations */

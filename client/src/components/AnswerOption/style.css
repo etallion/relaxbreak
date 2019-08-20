@@ -1,7 +1,5 @@
 /* AnswerOption Component */
-.answerOption {
-  margin: 8px;
-}
+
 .answerOption:hover {
   background-color: #afca52;
   padding: 20px;
@@ -102,9 +100,3 @@
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
-
-/* img {
-  width: 282.5px;
-  display: flex;
-  flex-direction: row;
-} */

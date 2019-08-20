@@ -11,6 +11,7 @@ h1 {
 
 .container {
   background: rgb(250, 193, 114, 0.7);
+  padding: 40px;
 }
 
 .coolHog {
@@ -18,7 +19,7 @@ h1 {
 }
 
 p {
-  font-size: 25px;
+  font-size: 24px;
   padding: 5px;
 }
 
