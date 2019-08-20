@@ -23,7 +23,7 @@ function QuizContainer(props) {
 
   return (
     <CSSTransition
-      className="container"
+      className="quizContainer"
       component="div"
       transitionName="fade"
       transitionEnterTimeout={800}

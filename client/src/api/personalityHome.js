@@ -4,7 +4,7 @@ var personalityHome = [
     name: "Active",
     image: "https://maxrelax.s3.amazonaws.com/gifs/activeHog.png",
     content:
-      "If you like to exercise, are adventourous and always on the go you might have an active personality!",
+      "If you like to exercise and are always on the go you might have an active personality!",
     button: "Active"
   },
   {
@@ -12,7 +12,7 @@ var personalityHome = [
     name: "Creative",
     image: "https://maxrelax.s3.amazonaws.com/gifs/creativeHog.png",
     content:
-      "If you like to draw or paint, are full of ideas and always wanting to make things you might have a creative personality!",
+      "If you like to draw, paint, or write and are full of ideas you might have a creative personality!",
     button: "Creative"
   },
   {
@@ -28,7 +28,7 @@ var personalityHome = [
     name: "Solo",
     image: "https://maxrelax.s3.amazonaws.com/gifs/soloHog.png",
     content:
-      "If you like to be alone, read a book and spend the afternoon daydreaming you might have a solo personality!",
+      "If you like to be alone when you do things and read books you might have a solo personality!",
     button: "Solo"
   }
 ];

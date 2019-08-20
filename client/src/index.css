@@ -24,12 +24,12 @@ code {
   box-sizing: border-box;
 }
 
-.container {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
+/* .container {
+  position: relative; */
+/* max-width: 900px; */
+/* margin: 0 auto;
   border-radius: 3px;
-}
+} */
 
 @media (min-width: 769px) {
   .container {

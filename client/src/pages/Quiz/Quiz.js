@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Result from "../../components/Result/Result";
 import "./Quiz.css";
 import QuizContainer from "../../components/QuizContainer/QuizContainer";
+import { Container, Row, Col } from "../../components/Grid";
 // import { Link } from "react-router-dom";
 
 import API from "../../utils/API_Q";
@@ -159,19 +160,23 @@ class Quiz extends Component {
 
   renderResult() {
     return (
-      <div className="resultContainer">
-        <Result quizResult={this.state.result} />
-      </div>
+      <QuizContainer>
+        <Container>
+          <Row>
+            <Col size="md-12">
+              <div className="resultContainer">
+                <Result quizResult={this.state.result} />
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </QuizContainer>
     );
   }
 
   render() {
     return (
-      <div>
-        {/* <QuizTitle /> */}
-
-        {this.state.result ? this.renderResult() : this.renderQuiz()}
-      </div>
+      <div>{this.state.result ? this.renderResult() : this.renderQuiz()}</div>
     );
   }
 }

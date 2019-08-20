@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 const logo = require("../../Images/Hedgehogs/maxRelaxLogo.png");
 
 function Nav(props) {
-  {console.log(props.auth)}
+  {
+    console.log(props.auth);
+  }
   return (
     <nav className="navbar navbar-expand-lg mainNav">
       <Link className="navbar-brand" to="/">
@@ -13,13 +15,14 @@ function Nav(props) {
         </span>
       </Link>
       {props.auth.auth ? (
-        <div><h4>Hello, {props.auth.name.split(" ")[0]}</h4></div>
+        <div>
+          <h4>Hello, {props.auth.name.split(" ")[0]}</h4>
+        </div>
       ) : (
         <Link to="/login">
           <button className="nav-button">Login</button>
-       </Link>
+        </Link>
       )}
-      
     </nav>
   );
 }
