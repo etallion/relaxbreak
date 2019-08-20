@@ -159,17 +159,19 @@ class Quiz extends Component {
 
   renderResult() {
     return (
-      <QuizContainer>
-        <div className="resultContainer">
-          <Result quizResult={this.state.result} />
-        </div>
-      </QuizContainer>
+      <div className="resultContainer">
+        <Result quizResult={this.state.result} />
+      </div>
     );
   }
 
   render() {
     return (
-      <div>{this.state.result ? this.renderResult() : this.renderQuiz()}</div>
+      <div>
+        {/* <QuizTitle /> */}
+
+        {this.state.result ? this.renderResult() : this.renderQuiz()}
+      </div>
     );
   }
 }
