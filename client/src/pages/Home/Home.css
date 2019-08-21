@@ -36,6 +36,9 @@ h1 {
   margin-top: 20px;
   margin-bottom: 20px;
 } */
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 .coolHog {
@@ -65,6 +68,19 @@ p {
   display: table;
 }
 
+<<<<<<< Updated upstream
+=======
+.firstParagraph {
+  float: right;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+>>>>>>> Stashed changes
 .infoContainer {
   padding: 2rem;
 }
