@@ -26,6 +26,9 @@ const UserSchema = new Schema({
     allowNull: true,
     validate: [input => input.length <= 5, "zipcode is too long"]
   },
+  location: {
+    type: Object
+  },
   password: {
     type: String,
     trim: true,

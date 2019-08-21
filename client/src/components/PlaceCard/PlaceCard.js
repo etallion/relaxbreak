@@ -15,7 +15,7 @@ class PlaceCard extends React.Component {
           const { place } = this.props;
           return (
             <div className="placeWrapper" id={place.place_id}>
-                    <i className="eyeCon" class="eye icon"></i> {place.name}
+                    <i className="eyeCon" className="eye icon"></i> {place.name}
                     {/* <Tooltip id="tooltip-top"
                         placement="right"
                         delay={{ show: 100, hide: 100 }}

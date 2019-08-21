@@ -73,7 +73,6 @@ class Home extends Component {
             
                 {/* and then share local activities and venues that cater */}
             {/* to your needs and likes! */}
-
             {/* <p>
                 Maybe you already know yourself pretty well and are just looking
                 for some cool new things to do in your area? Skip the quiz and
@@ -97,7 +96,6 @@ class Home extends Component {
               </Col>
             ))}
           </Row>
-
           <Row>
             <Col size="md-12">
               <p className="quizBtnText">
