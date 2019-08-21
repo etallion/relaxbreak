@@ -1,10 +1,10 @@
 .resultContainer {
   border: 20px solid #fb844d;
-  background-color: #fac172;
+  background-color: rgb(250, 193, 114, 0.7);
   margin: 0 auto;
   padding: 10px;
-  width: 900px;
-  height: 100%;
+  width: 70%;
+  height: 50%;
   margin-top: 50px;
   margin-bottom: 50px;
 }

@@ -4,6 +4,7 @@ import { CSSTransition } from "react-transition-group";
 import { Container, Row, Col } from "../../components/Grid";
 import "./style.css";
 import { Link } from "react-router-dom";
+import HomeWrapper from "../../components/HomeWrapper";
 
 function Result(props) {
   return (
@@ -41,7 +42,7 @@ function Result(props) {
               personality type?
             </h3>
             <strong>
-              <p>Click the button below to find out!</p>
+              <p className="resultP">Click the button below to find out!</p>
             </strong>
           </Col>
         </Row>

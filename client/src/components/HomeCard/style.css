@@ -1,79 +1,46 @@
-.col-md-12 {
-  background-color: #fac172;
-  border-radius: 5px;
-  justify-content: right;
-}
-
 .card {
   background: none;
-  border: transparent;
-  height: 450px;
-  border-radius: 5px;
-  /* margin: 1rem; */
-  position: relative;
-  /* width: 300px; */
-  width: 95%;
-  /* box-shadow: 0 3px 6px #999, 0 3px 6px #999; */
+  margin-top: 30px;
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
   text-align: center;
   background-color: #afca52;
-  padding-left: auto;
-  padding-right: auto;
+  justify-content: center;
+  padding-bottom: 10px;
 }
 
 .card > .img-container {
-  height: auto;
-  width: 250px;
-  margin: 15px;
-  /* overflow: hidden; */
-  text-align: center;
+  width: 100%;
+  margin: 0 auto;
   background: none;
-  /* background-color: #afca; */
-  padding-left: auto;
-  padding-right: auto;
 }
 
 .card > .img-container > img {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .card > .content {
-  padding-left: auto;
-  padding-right: auto;
-  font-size: 15px;
-}
-
-img {
-  display: block;
-  /* margin: 0px; */
-  /* padding-left: auto;
-  padding-right: auto; */
-  /* width: 50%; */
-  width: 220px;
-  height: 250px;
-  position: center;
-  padding-left: auto;
-  padding-right: auto;
+  height: 100%;
+  font-size: 20px;
 }
 
 .btn {
-  position: center;
-  /* width: 100%; */
   background: #fb844d;
   border: #de5d3e;
-  margin: 5px;
   text-align: center;
-  display: block;
-  width: auto;
   font-family: "Shadows Into Light Two", cursive;
-  margin: 5px 15px 15px 15px;
+  margin: 15px 15px 15px 15px;
 }
 
 .button-col {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  vertical-align: center;
 }
 
 /* This is for button animations */
@@ -84,7 +51,7 @@ img {
 }
 
 p {
-  text-align: center;
+  text-align: left;
 }
 
 button {

@@ -1,77 +1,32 @@
-.quizBtnText {
-  text-align: center;
-  margin: 20px 0px 20px 0px;
-}
-
-.welcomeBlurb {
-  padding-left: auto;
-  padding-right: auto;
-  background-color: #fac172;
-}
-
 button {
   font-family: "Walter Turncoat", cursive;
 }
 
-/* card {
-  position: center;
-} */
-
-.col-md-12 {
-  /* -webkit-box-flex: 0;
-  -ms-flex: 0 0 100%;
-  flex: 0 0 100%;
-  max-width: 100%; */
-  width: 1500px;
-}
-
-.col-md-3 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.wrapper {
-  /* padding-top: 50px; */
-  height: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  /* padding: 40px; */
-  justify-content: space-around;
-  /* align-content: flex-start; */
-  /* overflow: auto; */
-}
-
-.card > .img-container {
-  height: 60%;
-  overflow: hidden;
-  text-align: center;
-  background: none;
-  padding-left: auto;
-  padding-right: auto;
-}
-
 h1 {
   font-family: "Walter Turncoat", cursive;
-  text-align: auto;
-  padding-left: auto;
-  padding-right: auto;
-  justify-content: center;
-}
-
-#hogCards {
-  margin: 0.5%;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
 }
 
 .container {
-  position: relative;
-  /* max-width: 800px; */
-  margin: 0 auto;
-  background: #fac172;
-  border-radius: 3px;
+  background: rgb(250, 193, 114, 0.7);
+  padding: 40px;
 }
 
-.card > .content {
-  padding-left: auto;
-  padding-right: auto;
-  /* font-size: 15px; */
+.coolHog {
+  height: 100%;
+}
+
+p {
+  font-size: 24px;
+  padding: 5px;
+}
+
+.secondPara {
+  padding-top: 15px;
+}
+
+.quizBtnText {
+  padding-top: 40px;
 }

@@ -1,24 +1,20 @@
 .quizBtn {
-  /* width: 100%; */
   background: #afca52;
-  /* margin: 50px; */
   text-align: center;
-  width: 200px;
-  /* padding-top: 20px;
-  padding-bottom: 20px; */
+  margin: 0 auto;
+  padding: 10px;
   font-family: "Walter Turncoat", cursive;
-  /* font-size: 2rem; */
-  position: relative;
-  left: 45%;
-  margin-left: -45px !important;
-  display: block;
   color: #222;
-  margin-bottom: 50px;
-}
-
-.col-md-12 {
-  width: 100%;
-  padding: 0;
+  margin-bottom: 30px;
+  font-size: 25px;
+  margin-top: 20px;
+  /* height: 65px;
+  width: 250px; */
+  border-radius: 10px;
+  border-color: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /* This is for button animations */

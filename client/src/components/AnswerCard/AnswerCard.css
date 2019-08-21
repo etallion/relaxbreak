@@ -5,20 +5,16 @@
   border-color: #666;
   border-color: rgb(62, 112, 160);
   border-radius: 0.5rem;
-  /* padding: 0.5rem 0.5rem; */
   margin-bottom: 1rem;
   width: 100%;
   height: auto;
   text-align: center;
   overflow: hidden;
-
-  /* display: inline-block; */
 }
 
 .adminInputField {
   width: 100%;
   padding: 1rem;
-
 }
 
 .label {
@@ -32,12 +28,13 @@ input {
   width: 100%;
 }
 
-h1 {
+/* h1 {
   display: inline-block;
-}
+} */
 
 .cardRow {
   display: flex;
+  flex-direction: row;
 }
 
 .personalityHeader {
@@ -46,23 +43,18 @@ h1 {
   color: white;
   font-style: italic;
   font-variant-caps: small-caps;
-  /* text-align: left;
-  padding-left: 2rem; */
-
 }
 
 .hoverDiv {
   position: absolute;
   top: 3px;
   left: 20px;
-  /* display: none; */
 }
 
 /* .tooltip-inner {
   background-color: #fff;
   padding: 0;
 } */
-
 
 #tooltip-top > .tooltip-inner {
   background-color: #fff;

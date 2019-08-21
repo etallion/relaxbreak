@@ -2,32 +2,16 @@
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-weight: bold;
-  /* float: center; */
-  /* text-align: center; */
-  background: #8ed5c9;
-  /* position: absolute; */
+  background: rgb(142, 213, 201, 0.7);
   padding: 0;
   padding-bottom: 15px;
   padding-top: 15px;
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   overflow: hidden;
   z-index: 9999;
-
-  /* display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between; */
-  /* align-items: center;
-  align-content: stretch; */
-}
-img {
-  /* display: block; */
-  /* margin: auto; */
-  padding: auto;
-  /* width: 50%; */
-  max-width: 300px;
-  max-height: 250px;
-  /* position: center; */
+  align-items: center;
+  align-content: stretch;
 }
 
 .homeBtn {
@@ -35,28 +19,23 @@ img {
   border: transparent;
   width: 350px;
   height: auto;
+  /* margin-left: 200px; */
 }
 
 .navbar-brand {
-  position: relative;
-  left: 42%;
-  margin-left: -42px !important; /* 50% of your logo width */
-  display: block;
+  margin: 0 auto;
 }
 
 .nav-button {
   background: #fb844d;
   border: #de5d3e;
-  /* margin: 50px; */
   text-align: center;
   padding: 10px 30px;
   font-family: "Shadows Into Light Two", cursive;
-  position: relative;
-  left: 45%;
-  margin-left: -45px !important;
-  display: block;
   color: #222;
   border-radius: 0.25rem;
+  position: relative;
+  margin-right: 100px;
 }
 
 .nav-button:hover {

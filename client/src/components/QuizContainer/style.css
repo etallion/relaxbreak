@@ -1,20 +1,40 @@
+.quizContainer {
+  border: 6px solid #fb844d;
+  background-color: rgb(250, 193, 114, 0.7);
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  height: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  overflow: auto;
+
+  /* margin-top: 50px;
+  margin-bottom: 50px; */
+}
 .answerOptions {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
   margin-bottom: 50px;
-  color: white;
-  display: flex;
+  /* display: flex; */
   flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
-ul {
-  /* padding-top: 50px; */
-  height: 100%;
+/* ul { */
+/* padding-top: 50px; */
+/* height: 100%;
   display: flex;
   flex-direction: row;
   padding: 40px;
   justify-content: space-around;
   align-content: flex-start;
   width: 100%;
-}
+} */
