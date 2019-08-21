@@ -14,19 +14,13 @@ class Home extends Component {
 
   render() {
     return (
-<<<<<<< Updated upstream
       <HomeWrapper>
         <Container>
-=======
-      <div>
-        {/* <div>
->>>>>>> Stashed changes
           <Row>
             <Col size="md-12">
               <h1>Welcome To MaxRelax!</h1>
             </Col>
           </Row>
-<<<<<<< Updated upstream
           <Row>
             <Col size="md-3">
               <img
@@ -67,20 +61,6 @@ class Home extends Component {
               />
             </Col>
             {/* <p>
-=======
-        </div> */}
-        <Container className={styles.welcomeBlurb}>
-          <Row>
-            {/* <Col size="md-4"> */}
-            <Col size="md-12">
-              <div className={styles.infoContainer}>
-              <h1>Welcome To MaxRelax!</h1>
-              <img
-                  className={styles.coolHog}
-                  src="https://maxrelax.s3.amazonaws.com/gifs/coolHog.png"
-                />
-              <p className={styles.firstParagraph} >
->>>>>>> Stashed changes
                 There are so many choices for activities in a big city. It can
                 be a daunting task to choose one and know that it will be
                 something that you truly enjoy and suits your personality.
@@ -98,19 +78,10 @@ class Home extends Component {
                 for some cool new things to do in your area? Skip the quiz and
                 head straight to your personality page to find suggestions
                 tailored to you!
-<<<<<<< Updated upstream
               </p> */}
           </Row>
         </Container>
         <Container>
-=======
-              </p>
-              </div>
-            </Col>
-          </Row>
-        </Container>
-        <div className={styles.hogCards}>
->>>>>>> Stashed changes
           <Row>
             {this.state.personalityHome.map(personality => (
               <Col size="md-3">
@@ -125,7 +96,6 @@ class Home extends Component {
               </Col>
             ))}
           </Row>
-<<<<<<< Updated upstream
           <Row>
             <Col size="md-12">
               <p className="quizBtnText">
@@ -143,25 +113,6 @@ class Home extends Component {
           </Row>
         </Container>
       </HomeWrapper>
-=======
-        </div>
-        <Row>
-          <Col size="md-12">
-            <p className={styles.quizBtnText}>
-              Can't figure out which personality type best suits your relaxation
-              needs... Then take the quiz below to find out!
-            </p>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-12">
-            <Link to="/quiz">
-              <QuizButton />
-            </Link>
-          </Col>
-        </Row>
-      </div>
->>>>>>> Stashed changes
     );
   }
 }

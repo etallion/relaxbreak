@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 button {
   font-family: "Walter Turncoat", cursive;
 }
@@ -14,32 +13,6 @@ h1 {
   background: rgb(250, 193, 114, 0.7);
   padding: 40px;
 }
-=======
-.quizBtnText {
-  text-align: center;
-  margin: 20px 0px 20px 0px;
-  padding: 2rem;
-}
-
-.welcomeBlurb {
-  padding-left: auto;
-  padding-right: auto;
-  background-color: #fac172;
-}
-
-/* button {
-  font-family: "Walter Turncoat", cursive;
-} */
-
-
-/* .col-md-3 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-} */
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 .coolHog {
   height: 100%;
@@ -56,35 +29,4 @@ p {
 
 .quizBtnText {
   padding-top: 40px;
-}
-
-.firstParagraph {
-  float: right;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-<<<<<<< Updated upstream
-=======
-.firstParagraph {
-  float: right;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
->>>>>>> Stashed changes
-.infoContainer {
-  padding: 2rem;
-}
-
-.coolHog {
-  float: left;
 }
