@@ -22,10 +22,11 @@ class Login extends Component {
     event.preventDefault();
     API.signIn({email: this.state.email, password: this.state.password})
       .then(res => {
+        console.log("Logged In:::")
         console.log(res);
         if(res.data.status === 200){
           toast.success("Welcome back, " + res.data.name + "!");
-          this.props.setAuth({name: res.data.name, auth: true, zipcode: res.data.zipcode});
+          this.props.setAuth({name: res.data.name, auth: true, zipcode: res.data.zipcode, location: res.data.location});
           setTimeout(() => this.setState({loggedIn: true}), 2000);
         } else if (res.data.status === 400) {
           toast.error("Hmmm... something wasn't correct. Try again.");

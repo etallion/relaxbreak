@@ -9,22 +9,77 @@ import API_P from '../../utils/API_P';
 class PersonalityLand extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {personalities : [], myPersonality: { name: 'Extraordinary', terms: ['Southern Methodist University'], image: "https://via.placeholder.com/500", description: "People like you!"}, type: ''};
+    this.state = {
+      personalities : [],
+      myPersonality: {
+        name: 'Extraordinary',
+        terms: [],
+        image: "https://via.placeholder.com/500",
+        description: "People like you!"
+      },
+      errorMessage: '',
+      searchTerm: 'Southern Methodist University',
+      type: '',
+      location: {lat: 32.874, lng: -96.709},
+      zipcode: 75206,
+      formZipcode: 75206
+    };
   }
 
+  personData = {};
   componentDidMount(){
     this.setState({type: this.props.match.params.type})
     
     API_P.getPersonalities()
          .then(res => {
             this.setState({ personalities: res.data});
+            console.log("res data");
+            console.log(res.data);
             const filtered = res.data.filter(p => p.name.toLowerCase() === this.props.match.params.type.toLowerCase());
             if(filtered.length > 0){
-              this.setState({myPersonality: filtered[0]});
+              this.setState({myPersonality: {
+                name: filtered[0].name,
+                description: filtered[0].description,
+                terms: filtered[0].terms,
+                image: filtered[0].image
+                } 
+              });
+              this.setState({searchTerm: filtered[0].terms[0]});
             }
-            console.log("here");
+            // this.personData = filtered[0];
+            console.log("personalities");
             console.log(filtered);  
     });
+    if(!this.props.auth.auth){
+    window.navigator.geolocation.getCurrentPosition(
+        (position) => this.setState({ location: {lat: position.coords.latitude, lng: position.coords.longitude}}),
+        (err) => this.setState({errorMessage: err.message})
+        );
+    } else {
+      this.setState({
+        location: this.props.auth.location,
+        zipcode: this.props.auth.zipcode,
+        formZipcode: this.props.auth.zipcode
+      });
+    }
+    
+    console.log("location in props");
+    console.log(this.props.auth.location);
+    console.log("terms in state");
+    console.log(this.state.myPersonality.terms);  
+    console.log("personData");
+    console.log(this.state.personalities);  
+  };
+
+  updateZipcode = event => {
+    event.preventDefault();
+    this.setState({zipcode: this.state.formZipcode});
+  };
+
+  updateActivity = event => {
+    event.preventDefault();
+    this.setState({searchTerm: event.target.value});
+    console.log("new term", event.target.value);
   };
 
   // break props down into personality title, description, hedgehog pic, and events array
@@ -50,8 +105,25 @@ render() {
           </div>
         </div>
       </div>
-      <h3 className="centered-title">Try these events in your area!</h3>
-      <MapView auth={this.props.auth} keyWords={this.state.myPersonality.terms ? this.state.myPersonality.terms : ['Southern Methodist University']}/>      
+      <div className="checkoutEvents">
+      <h3 className="centered-title">Try these</h3>
+      <select className="activitySelect" value={this.state.searchTerm} onChange={this.updateActivity}>
+          {this.state.myPersonality.terms.map(term => (
+            <option value={term}>{term}</option>
+          ))}
+        </select>
+      <h3>events in your</h3> <h3> area!</h3>
+      <form onSubmit={this.updateZipcode}>
+      <input className="zipInput" type='text' name='eventZipcode' value={this.state.formZipcode} onChange={e => this.setState({formZipcode: e.target.value})}/>
+      <input className="updateButton" type='submit' value='Update' />
+      </form > 
+      </div>
+      <MapView
+        auth={this.props.auth}
+        searchTerm={this.state.searchTerm}
+        location = {this.state.location}
+        zipcode = {this.state.zipcode}
+      />      
     </>
   );
 }

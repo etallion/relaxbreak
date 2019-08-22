@@ -4,7 +4,7 @@
 h1,
 p,
 img {
-  margin: 15px;
+  /* margin: 15px; */
 }
 .personality-hedge {
   margin-left: auto;
@@ -29,3 +29,23 @@ img {
 .card-image-top {
   margin-bottom: 1px;
 }
+
+.zipInput {
+  width: 10rem;
+  margin-left: 1rem;
+  margin-right: 1rem;  
+}
+
+.activitySelect {
+  margin-left: 1rem;
+  margin-right: 1rem;  
+}
+
+.updateButton {
+  width: 5rem;
+  }
+
+.checkoutEvents {
+  display: flex;
+  justify-content: center;
+} 

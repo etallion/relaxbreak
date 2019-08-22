@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Home.css";
+import styles from "./Home.css";
 import HomeCard from "../../components/HomeCard";
 import HomeWrapper from "../../components/HomeWrapper";
 import personalityHome from "../../api/personalityHome";
@@ -65,7 +65,7 @@ class Home extends Component {
                 be a daunting task to choose one and know that it will be
                 something that you truly enjoy and suits your personality.
               </p>
-              <p>
+              <p className={styles.firstParagraph}>
                 What if you feel like trying something new but don’t have an
                 inkling of what to do outside of your social norms? If only
                 coming up empty-handed for ideas were a thing of the past...
@@ -73,7 +73,6 @@ class Home extends Component {
             
                 {/* and then share local activities and venues that cater */}
             {/* to your needs and likes! */}
-
             {/* <p>
                 Maybe you already know yourself pretty well and are just looking
                 for some cool new things to do in your area? Skip the quiz and
@@ -97,7 +96,6 @@ class Home extends Component {
               </Col>
             ))}
           </Row>
-
           <Row>
             <Col size="md-12">
               <p className="quizBtnText">
