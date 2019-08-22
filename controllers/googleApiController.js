@@ -5,18 +5,22 @@ const ZIPAPI = "glGyMsTFqZUgjAXI6DTUZPSzVvJbyekXIzGi9tpwVusQ6VOiaaoCBCtUcOLw2GgZ
 
 module.exports = {
     search: function(req, res) {
-        console.log(req.body);
-        const newObj = {
-            term: req.params.term,
-            location: req.params.location,
-            key: KEY
-        };
+        //https://maps.googleapis.com/maps/api/place/textsearch/xml?query=restaurants+in+Sydney&key=YOUR_API_KEY
+
+        // Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=YOUR_API_KEY
         axios.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + req.params.term +
-            '&location=' + req.params.location +
-            '&radius=10' +
-            "&key=" + KEY)
+            '%20' + req.params.location +
+            '&key=' + KEY)
+            // '&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=' + KEY)
         .then(result => res.json(result.data))
         .catch(err => res.status(422).json(err));
+
+        // axios.get('https://maps.googleapis.com/maps/api/place/textsearch/json?query=' + req.params.term +
+        //     '&location=atchison' +
+        //     '&radius=10' +
+        //     "&key=" + KEY)
+        // .then(result => res.json(result.data))
+        // .catch(err => res.status(422).json(err));
     },
     locationByZip: function(zip){
         let location;

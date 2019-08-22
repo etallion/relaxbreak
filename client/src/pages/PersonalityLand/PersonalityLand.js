@@ -13,14 +13,16 @@ class PersonalityLand extends React.Component {
       personalities : [],
       myPersonality: {
         name: 'Extraordinary',
-        terms: ['Southern Methodist University'],
+        terms: [],
         image: "https://via.placeholder.com/500",
         description: "People like you!"
       },
       errorMessage: '',
+      searchTerm: 'Southern Methodist University',
       type: '',
       location: {lat: 32.874, lng: -96.709},
-      zipcode: 75206
+      zipcode: 75206,
+      formZipcode: 75206
     };
   }
 
@@ -42,7 +44,7 @@ class PersonalityLand extends React.Component {
                 image: filtered[0].image
                 } 
               });
-              
+              this.setState({searchTerm: filtered[0].terms[0]});
             }
             // this.personData = filtered[0];
             console.log("personalities");
@@ -56,15 +58,28 @@ class PersonalityLand extends React.Component {
     } else {
       this.setState({
         location: this.props.auth.location,
-        zipcode: this.props.auth.zipcode
+        zipcode: this.props.auth.zipcode,
+        formZipcode: this.props.auth.zipcode
       });
     }
+    
     console.log("location in props");
     console.log(this.props.auth.location);
     console.log("terms in state");
     console.log(this.state.myPersonality.terms);  
     console.log("personData");
     console.log(this.state.personalities);  
+  };
+
+  updateZipcode = event => {
+    event.preventDefault();
+    this.setState({zipcode: this.state.formZipcode});
+  };
+
+  updateActivity = event => {
+    event.preventDefault();
+    this.setState({searchTerm: event.target.value});
+    console.log("new term", event.target.value);
   };
 
   // break props down into personality title, description, hedgehog pic, and events array
@@ -90,10 +105,22 @@ render() {
           </div>
         </div>
       </div>
-      <h3 className="centered-title">Try these events in your area!</h3>
+      <div className="checkoutEvents">
+      <h3 className="centered-title">Try these</h3>
+      <select className="activitySelect" value={this.state.searchTerm} onChange={this.updateActivity}>
+          {this.state.myPersonality.terms.map(term => (
+            <option value={term}>{term}</option>
+          ))}
+        </select>
+      <h3>events in your</h3> <h3> area!</h3>
+      <form onSubmit={this.updateZipcode}>
+      <input className="zipInput" type='text' name='eventZipcode' value={this.state.formZipcode} onChange={e => this.setState({formZipcode: e.target.value})}/>
+      <input className="updateButton" type='submit' value='Update' />
+      </form > 
+      </div>
       <MapView
         auth={this.props.auth}
-        keyWords={this.state.myPersonality.terms}
+        searchTerm={this.state.searchTerm}
         location = {this.state.location}
         zipcode = {this.state.zipcode}
       />      
